@@ -3,5 +3,49 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
+    "jenga-ds": {
+      "projectType": "library",
+      "root": "projects/jenga-ds",
+      "sourceRoot": "projects/jenga-ds/src",
+      "prefix": "jenga",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/jenga-ds/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/jenga-ds/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/jenga-ds/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "tsConfig": "projects/jenga-ds/tsconfig.spec.json",
+            "polyfills": ["zone.js", "zone.js/testing"]
+          }
+        }
+      }
+    },
+    "storybook": {
+      "projectType": "application",
+      "root": "stories",
+      "sourceRoot": "stories",
+      "architect": {
+        "build": {
+          "options": {
+            "tsConfig": "tsconfig.json",
+            "styles": [],
+            "scripts": []
+          }
+        }
+      }
+    }
   }
 }
