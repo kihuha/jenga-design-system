@@ -8,8 +8,8 @@
     "directives": [],
     "components": [
         {
-            "name": "AlertComponent",
-            "id": "component-AlertComponent-8ac049090a5aee397ea1c6a67be5393ee66da00d276316fde52c4efc6f6c6065fbc52735183a50334b4e4d68dc045b7d55a0c1237554d531eedcd92930ceb78b",
+            "name": "Alert",
+            "id": "component-Alert-5ee331dca1370c0517062496d8dfdb00cc36fcf2ad087b2b15c5277a6f1cac5f88fe2f1856159abcfbc5257b0278e6576abc65e2d3124d4c0a29aef45965b075",
             "file": "projects/jenga-ds/src/lib/alert/alert.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -17,9 +17,7 @@
             "outputs": [],
             "providers": [],
             "selector": "jenga-alert",
-            "styleUrls": [
-                "./alert.component.css"
-            ],
+            "styleUrls": [],
             "styles": [],
             "templateUrl": [
                 "./alert.component.html"
@@ -36,20 +34,15 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component } from '@angular/core';\n\n@Component({\n  selector: 'jenga-alert',\n  templateUrl: './alert.component.html',\n  styleUrls: ['./alert.component.css']\n})\nexport class AlertComponent {\n\n}\n",
+            "sourceCode": "import { Component } from '@angular/core';\n\n@Component({\n  selector: 'jenga-alert',\n  templateUrl: './alert.component.html',\n})\nexport class Alert {}\n",
             "assetsDirs": [],
-            "styleUrlsData": [
-                {
-                    "data": "",
-                    "styleUrl": "./alert.component.css"
-                }
-            ],
+            "styleUrlsData": "",
             "stylesData": "",
             "templateData": "<p>alert works!</p>\n"
         },
         {
             "name": "Button",
-            "id": "component-Button-b8e966289ae41609dae296dfb8ea892b289a264cb4b4c2ee84384b3ded978204cb5b4142d12b60f0a7a796d1b0d71b5080c36dd2c48f1b6636de414af90c646f",
+            "id": "component-Button-80dfa28b3b1d9288279546586515ad5cc0f9fd2340448de3d029be25fda3bf0566d60bb9ba28d8a49a74bf045d19992690e4692c0365cad5b6c01a2cf06a39a9",
             "file": "projects/jenga-ds/src/lib/button/button.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -61,8 +54,9 @@
                 "./button.component.css"
             ],
             "styles": [],
-            "template": "<button    class=\"btn\"\n    [ngClass]=\"{\n      'btn--sm': this.size === 'sm',\n      'btn--md': this.size === 'md',\n      'btn--lg': this.size === 'lg'\n    }\"\n  >\n    <span\n      *ngIf=\"icon\"\n      class=\"material-symbols-rounded\"\n      data-testid=\"btn-icon\"\n      >{{ icon }}</span\n    >\n    <span data-testid=\"btn-label\">{{ label }}</span>\n  </button>",
-            "templateUrl": [],
+            "templateUrl": [
+                "./button.component.html"
+            ],
             "viewProviders": [],
             "inputsClass": [
                 {
@@ -72,7 +66,7 @@
                     "deprecationMessage": "",
                     "rawdescription": "\n\nButton icon\n\noptional\n",
                     "description": "<p>Button icon</p>\n<p>optional</p>\n",
-                    "line": 41,
+                    "line": 32,
                     "type": "string",
                     "decorators": []
                 },
@@ -83,15 +77,15 @@
                     "deprecationMessage": "",
                     "jsdoctags": [
                         {
-                            "pos": 681,
-                            "end": 694,
+                            "pos": 259,
+                            "end": 272,
                             "flags": 4227072,
                             "modifierFlagsCache": 0,
                             "transformFlags": 0,
                             "kind": 325,
                             "tagName": {
-                                "pos": 682,
-                                "end": 690,
+                                "pos": 260,
+                                "end": 268,
                                 "flags": 4227072,
                                 "modifierFlagsCache": 0,
                                 "transformFlags": 0,
@@ -103,7 +97,7 @@
                     ],
                     "rawdescription": "\n\nButton contents\n\n",
                     "description": "<p>Button contents</p>\n",
-                    "line": 33,
+                    "line": 15,
                     "type": "string",
                     "decorators": []
                 },
@@ -114,8 +108,40 @@
                     "deprecationMessage": "",
                     "rawdescription": "\n\nHow large should the button be?\n",
                     "description": "<p>How large should the button be?</p>\n",
-                    "line": 47,
+                    "line": 38,
                     "type": "\"sm\" | \"md\" | \"lg\"",
+                    "decorators": []
+                },
+                {
+                    "name": "type",
+                    "defaultValue": "'text'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "pos": 393,
+                            "end": 410,
+                            "flags": 4227072,
+                            "modifierFlagsCache": 0,
+                            "transformFlags": 0,
+                            "kind": 325,
+                            "tagName": {
+                                "pos": 394,
+                                "end": 401,
+                                "flags": 4227072,
+                                "modifierFlagsCache": 0,
+                                "transformFlags": 0,
+                                "kind": 79,
+                                "originalKeywordKind": 88,
+                                "escapedText": "default"
+                            },
+                            "comment": "<p>text</p>\n"
+                        }
+                    ],
+                    "rawdescription": "\n\nButton type\n\ncan either be elevated, filled, tonal, outlined, text\n",
+                    "description": "<p>Button type</p>\n<p>can either be elevated, filled, tonal, outlined, text</p>\n",
+                    "line": 24,
+                    "type": "\"elevated\" | \"filled\" | \"tonal\" | \"outlined\" | \"text\"",
                     "decorators": []
                 }
             ],
@@ -125,7 +151,7 @@
                     "defaultValue": "new EventEmitter<Event>()",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 50,
+                    "line": 41,
                     "type": "EventEmitter"
                 }
             ],
@@ -138,27 +164,28 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { CommonModule } from '@angular/common';\nimport { Component, EventEmitter, Input, Output } from '@angular/core';\n\n@Component({\n  standalone: true,\n  selector: 'jenga-button',\n  template: `<button\n    class=\"btn\"\n    [ngClass]=\"{\n      'btn--sm': this.size === 'sm',\n      'btn--md': this.size === 'md',\n      'btn--lg': this.size === 'lg'\n    }\"\n  >\n    <span\n      *ngIf=\"icon\"\n      class=\"material-symbols-rounded\"\n      data-testid=\"btn-icon\"\n      >{{ icon }}</span\n    >\n    <span data-testid=\"btn-label\">{{ label }}</span>\n  </button>`,\n  styleUrls: ['./button.component.css'],\n  imports: [CommonModule],\n})\nexport class Button {\n  /**\n   * Button contents\n   *\n   * @required\n   */\n  @Input()\n  label = '';\n\n  /**\n   * Button icon\n   *\n   * optional\n   */\n  @Input()\n  icon: string = '';\n\n  /**\n   * How large should the button be?\n   */\n  @Input()\n  size: 'sm' | 'md' | 'lg' = 'md';\n\n  @Output()\n  onClick = new EventEmitter<Event>();\n}\n",
+            "sourceCode": "import { Component, EventEmitter, Input, Output } from '@angular/core';\n\n@Component({\n  selector: 'jenga-button',\n  templateUrl: './button.component.html',\n  styleUrls: ['./button.component.css'],\n})\nexport class Button {\n  /**\n   * Button contents\n   *\n   * @required\n   */\n  @Input()\n  label = '';\n\n  /**\n   * Button type\n   *\n   * can either be elevated, filled, tonal, outlined, text\n   * @default text\n   */\n  @Input()\n  type: 'elevated' | 'filled' | 'tonal' | 'outlined' | 'text' = 'text';\n\n  /**\n   * Button icon\n   *\n   * optional\n   */\n  @Input()\n  icon: string = '';\n\n  /**\n   * How large should the button be?\n   */\n  @Input()\n  size: 'sm' | 'md' | 'lg' = 'md';\n\n  @Output()\n  onClick = new EventEmitter<Event>();\n}\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
-                    "data": "",
+                    "data": "button {\n  margin: 0;\n  padding: 0;\n  box-sizing: border-box;\n  font-family: inherit;\n  font-size: 100%;\n  font-weight: inherit;\n  text-transform: none;\n  line-height: inherit;\n  color: inherit;\n  border-width: 0;\n  border-style: solid;\n  cursor: pointer;\n}\n\nbutton,\n[type=\"button\"],\n[type=\"reset\"],\n[type=\"submit\"] {\n  -webkit-appearance: button;\n  background-color: transparent;\n  background-image: none;\n}\n\n.btn {\n  background: var(--btn-background, white);\n}\n",
                     "styleUrl": "./button.component.css"
                 }
             ],
-            "stylesData": ""
+            "stylesData": "",
+            "templateData": "<button\n  class=\"btn\"\n  ngClass=\"{\n      'btn--sm': this.size === 'sm',\n      'btn--md': this.size === 'md',\n      'btn--lg': this.size === 'lg'\n    }\"\n>\n  <span *ngIf=\"icon\" class=\"material-symbols-rounded\" data-testid=\"btn-icon\">{{\n    icon\n  }}</span>\n  <span data-testid=\"btn-label\">{{ label }}</span>\n</button>\n"
         }
     ],
     "modules": [
         {
             "name": "JengaDsModule",
-            "id": "module-JengaDsModule-caa2e1a2eaad0ec486450eab57fcae5362a0cc110c6f36b6b2eefa4da51f6bf53e3cb78b7e4653baffab5e7b81fdeaf08d975fe92130dd1d0681a472762ae913",
+            "id": "module-JengaDsModule-dc667f732003381fb00828eb1f86c70f966896fa5daa9998eb1b2840d5cd1b7096655ac11e2ee030d68ac9e0ce6e5ff926b91f0ceb2c072abf76c5e3b3303867",
             "description": "",
             "deprecationMessage": "",
             "deprecated": false,
             "file": "projects/jenga-ds/src/lib/jenga-ds.module.ts",
             "methods": [],
-            "sourceCode": "import { NgModule } from '@angular/core';\nimport { AlertComponent } from './alert/alert.component';\n\n@NgModule({\n  declarations: [\n    AlertComponent\n  ],\n  imports: [],\n  exports: [],\n})\nexport class JengaDsModule {}\n",
+            "sourceCode": "import { NgModule } from '@angular/core';\nimport { Button } from './button/button.component';\nimport { Alert } from './alert/alert.component';\nimport { BrowserModule } from '@angular/platform-browser';\nimport { CommonModule } from '@angular/common';\n\n@NgModule({\n  declarations: [Alert, Button],\n  imports: [BrowserModule],\n  exports: [Alert, Button],\n})\nexport class JengaDsModule {}\n",
             "children": [
                 {
                     "type": "providers",
@@ -168,7 +195,10 @@
                     "type": "declarations",
                     "elements": [
                         {
-                            "name": "AlertComponent"
+                            "name": "Alert"
+                        },
+                        {
+                            "name": "Button"
                         }
                     ]
                 },
@@ -178,7 +208,14 @@
                 },
                 {
                     "type": "exports",
-                    "elements": []
+                    "elements": [
+                        {
+                            "name": "Alert"
+                        },
+                        {
+                            "name": "Button"
+                        }
+                    ]
                 },
                 {
                     "type": "bootstrap",
@@ -197,11 +234,31 @@
                 "name": "Default",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
+                "file": "stories/Alert.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
+                "name": "Default",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
                 "file": "stories/Button.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "",
                 "defaultValue": "Template.bind({})"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "stories/Alert.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story<Alert>",
+                "defaultValue": "(args: Alert) => ({\n  props: args,\n})"
             },
             {
                 "name": "Template",
@@ -228,6 +285,28 @@
         "typealiases": [],
         "enumerations": [],
         "groupedVariables": {
+            "stories/Alert.stories.ts": [
+                {
+                    "name": "Default",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "stories/Alert.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Template",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "stories/Alert.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story<Alert>",
+                    "defaultValue": "(args: Alert) => ({\n  props: args,\n})"
+                }
+            ],
             "stories/Button.stories.ts": [
                 {
                     "name": "Default",
@@ -267,14 +346,14 @@
     },
     "routes": [],
     "coverage": {
-        "count": 12,
+        "count": 9,
         "status": "low",
         "files": [
             {
                 "filePath": "projects/jenga-ds/src/lib/alert/alert.component.ts",
                 "type": "component",
                 "linktype": "component",
-                "name": "AlertComponent",
+                "name": "Alert",
                 "coveragePercent": 0,
                 "coverageCount": "0/1",
                 "status": "low"
@@ -284,9 +363,29 @@
                 "type": "component",
                 "linktype": "component",
                 "name": "Button",
-                "coveragePercent": 60,
-                "coverageCount": "3/5",
+                "coveragePercent": 66,
+                "coverageCount": "4/6",
                 "status": "good"
+            },
+            {
+                "filePath": "stories/Alert.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Default",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "stories/Alert.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Template",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
             },
             {
                 "filePath": "stories/Button.stories.ts",

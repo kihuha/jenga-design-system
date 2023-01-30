@@ -14,13 +14,4 @@ module.exports = {
   core: {
     builder: "@storybook/builder-webpack5",
   },
-  webpackFinal: async (config, { configType }) => {
-    config.module.rules.push({
-      test: /\.css$/,
-      use: ["style-loader", "css-loader"],
-      include: path.resolve(__dirname, "../"),
-    });
-
-    return config;
-  },
 };

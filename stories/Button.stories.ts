@@ -4,9 +4,6 @@ import { Button } from 'projects/jenga-ds/src/lib/button/button.component';
 export default {
   title: 'Jenga-DS/Button',
   component: Button,
-  argTypes: {
-    backgroundColor: { control: 'color' },
-  },
 } as Meta;
 
 const Template: Story<Button> = (args: Button) => ({
@@ -17,10 +14,11 @@ export const Default = Template.bind({});
 Default.args = {
   label: 'Button',
   size: 'sm',
+  type: 'filled',
 };
 
 export const WithIcon = Template.bind({});
 WithIcon.args = {
   label: 'Button',
-  icon: 'info',
+  icon: 'add',
 };

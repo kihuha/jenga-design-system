@@ -1,27 +1,9 @@
-import { CommonModule } from '@angular/common';
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
-  standalone: true,
   selector: 'jenga-button',
-  template: `<button
-    class="btn"
-    [ngClass]="{
-      'btn--sm': this.size === 'sm',
-      'btn--md': this.size === 'md',
-      'btn--lg': this.size === 'lg'
-    }"
-  >
-    <span
-      *ngIf="icon"
-      class="material-symbols-rounded"
-      data-testid="btn-icon"
-      >{{ icon }}</span
-    >
-    <span data-testid="btn-label">{{ label }}</span>
-  </button>`,
-  styleUrls: ['./button.component.css'],
-  imports: [CommonModule],
+  templateUrl: './button.component.html',
+  styleUrls: ['./button.component.scss'],
 })
 export class Button {
   /**
@@ -31,6 +13,31 @@ export class Button {
    */
   @Input()
   label = '';
+
+  /**
+   * Button type
+   *
+   * can either be elevated, filled, tonal, outlined, text
+   * @default text
+   */
+  @Input()
+  type: 'elevated' | 'filled' | 'tonal' | 'outlined' | 'text' = 'text';
+
+  /**
+   * Button color
+   *
+   * can either be 'primary' 'secondary' 'tertiary' 'error' 'warning' 'success' or a valid hex code
+   * @default primary
+   */
+  @Input()
+  color:
+    | 'primary'
+    | 'secondary'
+    | 'tertiary'
+    | 'error'
+    | 'warning'
+    | 'success'
+    | string = 'primary';
 
   /**
    * Button icon

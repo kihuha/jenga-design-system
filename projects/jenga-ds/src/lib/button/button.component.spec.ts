@@ -1,3 +1,4 @@
+import { CommonModule } from '@angular/common';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
 
@@ -8,7 +9,12 @@ describe('Button', () => {
   let fixture: ComponentFixture<Button>;
 
   beforeEach(async () => {
+    TestBed.configureTestingModule({
+      imports: [CommonModule],
+      declarations: [Button],
+    }).compileComponents();
     fixture = TestBed.createComponent(Button);
+
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

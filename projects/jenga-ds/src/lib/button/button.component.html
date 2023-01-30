@@ -1,0 +1,21 @@
+<button
+  class="btn"
+  [ngClass]="{
+    'btn--sm': this.size === 'sm',
+    'btn--md': this.size === 'md',
+    'btn--lg': this.size === 'lg',
+    'btn--filled': this.type === 'filled',
+    'btn--outlined': this.type === 'outlined',
+    'btn--text': this.type === 'text',
+    'btn--elevated': this.type === 'elevated',
+    'btn--tonal': this.type === 'tonal'
+  }"
+>
+  <span
+    *ngIf="icon"
+    class="material-symbols-rounded btn__icon"
+    data-testid="btn-icon"
+    >{{ icon }}</span
+  >
+  <span data-testid="btn-label">{{ label }}</span>
+</button>

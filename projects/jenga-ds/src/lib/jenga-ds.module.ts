@@ -1,11 +1,12 @@
 import { NgModule } from '@angular/core';
-import { AlertComponent } from './alert/alert.component';
+import { Button } from './button/button.component';
+import { Alert } from './alert/alert.component';
+import { BrowserModule } from '@angular/platform-browser';
+import { CommonModule } from '@angular/common';
 
 @NgModule({
-  declarations: [
-    AlertComponent
-  ],
-  imports: [],
-  exports: [],
+  declarations: [Alert, Button],
+  imports: [BrowserModule],
+  exports: [Alert, Button],
 })
 export class JengaDsModule {}
