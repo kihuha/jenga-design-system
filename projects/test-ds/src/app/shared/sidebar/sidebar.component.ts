@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { ActivatedRoute, UrlSegment } from '@angular/router';
-import { map, Observable } from 'rxjs';
+import { Event, NavigationStart, Router } from '@angular/router';
+import { map, Observable, switchMap } from 'rxjs';
 
 @Component({
   selector: 'app-sidebar',
@@ -11,7 +11,7 @@ export class SidebarComponent {
   sidebarLinks = [
     {
       name: 'Introduction',
-      link: '',
+      link: '/',
     },
     {
       index: 1,
@@ -28,15 +28,13 @@ export class SidebarComponent {
     },
   ];
 
-  currentUrl!: Observable<string>;
+  url: any;
 
-  constructor(private activatedRoute: ActivatedRoute) {
-    this.currentUrl = this.activatedRoute.url.pipe(
-      map((url) => {
-        console.log(url[0].path);
-
-        return url[0].path;
-      })
-    );
+  constructor(private router: Router) {
+    this.url = this.router.events.subscribe((event) => {
+      if (event instanceof NavigationStart) {
+        this.url = event.url;
+      }
+    });
   }
 }
