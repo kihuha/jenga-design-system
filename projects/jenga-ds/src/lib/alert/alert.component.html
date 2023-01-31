@@ -1,1 +1,9 @@
-<p>alert works!</p>
+<div
+  class="alert"
+  [ngClass]="{
+    'alert--filled': this.type === 'filled',
+    'alert--tonal': this.type === 'tonal'
+  }"
+>
+  <ng-content></ng-content>
+</div>

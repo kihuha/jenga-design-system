@@ -3,15 +3,15 @@
 @tailwind utilities;
 
 :root {
+  --alert-text-color: white;
+  --alert-main-color-hue: 350;
+  --alert-main-color-saturation: 85%;
+  --alert-main-color-lightness: 53%;
+
   --btn-color: white;
   --btn-main-color-hue: 350;
   --btn-main-color-saturation: 85%;
   --btn-main-color-lightness: 53%;
-
-  --hue: 201;
-  --saturation: 31%; /* here */
-  --lightness: 40;
-  --mainColor: hsl(var(--hue), var(--saturation), var(--lightness));
 }
 
 .material-symbols-outlined {

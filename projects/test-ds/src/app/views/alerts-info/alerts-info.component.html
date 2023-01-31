@@ -1,3 +1,13 @@
 <app-layout title="Alerts">
-  <jenga-alert></jenga-alert>
+  <div class="grid grid-cols-2 gap-x-12">
+    <div class="flex flex-col">
+      <span class="mb-3">Filled</span>
+      <jenga-alert> Alert content is here </jenga-alert>
+    </div>
+
+    <div class="flex flex-col">
+      <span class="mb-3">Tonal</span>
+      <jenga-alert type="tonal"> Alert content is here </jenga-alert>
+    </div>
+  </div>
 </app-layout>

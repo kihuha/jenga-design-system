@@ -1,0 +1,35 @@
+$alert-main-color: hsl(
+  var(--alert-main-color-hue, 210),
+  var(--alert-main-color-saturation, 100%),
+  var(--alert-main-color-lightness, 56%)
+);
+$alert-text-color: var(--alert-text-color, white);
+
+.alert {
+  display: flex;
+  padding: 1rem;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 20px;
+
+  &--filled {
+    background: $alert-main-color;
+    color: $alert-text-color;
+  }
+
+  &--tonal {
+    background: hsl(
+      var(--alert-main-color-hue, 210),
+      var(--alert-main-color-saturation, 100%),
+      94%
+    );
+    color: hsl(
+      var(--alert-main-color-hue, 210),
+      var(--alert-main-color-saturation, 100%),
+      36%
+    );
+  }
+}
