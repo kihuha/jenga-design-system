@@ -205,7 +205,7 @@
                 }
             ],
             "stylesData": "",
-            "templateData": "<button\n  class=\"btn\"\n  [ngClass]=\"{\n    'btn--sm': this.size === 'sm',\n    'btn--md': this.size === 'md',\n    'btn--lg': this.size === 'lg',\n    'btn--filled': this.type === 'filled',\n    'btn--outlined': this.type === 'outlined',\n    'btn--text': this.type === 'text',\n    'btn--elevated': this.type === 'elevated',\n    'btn--tonal': this.type === 'tonal'\n  }\"\n>\n  <span\n    *ngIf=\"icon\"\n    class=\"material-symbols-rounded btn__icon\"\n    data-testid=\"btn-icon\"\n    >{{ icon }}</span\n  >\n  <span data-testid=\"btn-label\">{{ label }}</span>\n</button>\n"
+            "templateData": "<button\n  class=\"btn\"\n  [ngClass]=\"{\n    'btn--sm': this.size === 'sm',\n    'btn--md': this.size === 'md',\n    'btn--lg': this.size === 'lg',\n    'btn--filled': this.type === 'filled',\n    'btn--outlined': this.type === 'outlined',\n    'btn--text': this.type === 'text',\n    'btn--elevated': this.type === 'elevated',\n    'btn--tonal': this.type === 'tonal'\n  }\"\n>\n  <!-- TODO: ADD COLOR ADJUSTMENTS -->\n  <span\n    *ngIf=\"icon\"\n    class=\"material-symbols-rounded btn__icon\"\n    data-testid=\"btn-icon\"\n    >{{ icon }}</span\n  >\n  <span data-testid=\"btn-label\">{{ label }}</span>\n</button>\n"
         }
     ],
     "modules": [
@@ -266,7 +266,7 @@
                 "name": "Default",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "stories/Button.stories.ts",
+                "file": "stories/Alert.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "",
@@ -276,21 +276,21 @@
                 "name": "Default",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "stories/Alert.stories.ts",
+                "file": "stories/Button.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "",
                 "defaultValue": "Template.bind({})"
             },
             {
-                "name": "Template",
+                "name": "Primary",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "stories/Button.stories.ts",
+                "file": "stories/Button.test.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
-                "type": "Story<Button>",
-                "defaultValue": "(args: Button) => ({\n  props: args,\n})"
+                "type": "",
+                "defaultValue": "composeStory(DefaultStory, Meta)"
             },
             {
                 "name": "Template",
@@ -301,6 +301,16 @@
                 "deprecationMessage": "",
                 "type": "Story<Alert>",
                 "defaultValue": "(args: Alert) => ({\n  props: args,\n})"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "stories/Button.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story<Button>",
+                "defaultValue": "(args: Button) => ({\n  props: args,\n})"
             },
             {
                 "name": "WithIcon",
@@ -317,6 +327,28 @@
         "typealiases": [],
         "enumerations": [],
         "groupedVariables": {
+            "stories/Alert.stories.ts": [
+                {
+                    "name": "Default",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "stories/Alert.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Template",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "stories/Alert.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story<Alert>",
+                    "defaultValue": "(args: Alert) => ({\n  props: args,\n})"
+                }
+            ],
             "stories/Button.stories.ts": [
                 {
                     "name": "Default",
@@ -349,26 +381,16 @@
                     "defaultValue": "Template.bind({})"
                 }
             ],
-            "stories/Alert.stories.ts": [
+            "stories/Button.test.ts": [
                 {
-                    "name": "Default",
+                    "name": "Primary",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
-                    "file": "stories/Alert.stories.ts",
+                    "file": "stories/Button.test.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "",
-                    "defaultValue": "Template.bind({})"
-                },
-                {
-                    "name": "Template",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "stories/Alert.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Story<Alert>",
-                    "defaultValue": "(args: Alert) => ({\n  props: args,\n})"
+                    "defaultValue": "composeStory(DefaultStory, Meta)"
                 }
             ]
         },
@@ -378,7 +400,7 @@
     },
     "routes": [],
     "coverage": {
-        "count": 10,
+        "count": 8,
         "status": "low",
         "files": [
             {
@@ -445,6 +467,16 @@
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
                 "name": "WithIcon",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "stories/Button.test.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Primary",
                 "coveragePercent": 0,
                 "coverageCount": "0/1",
                 "status": "low"
