@@ -9,40 +9,6 @@ import hexToHsl from './utils/hexToHsl';
 export class AppComponent {
   title = 'test-ds';
 
-  activeIndex = 3;
-  sidebarLinks = [
-    {
-      name: 'Introduction',
-    },
-    {
-      name: 'Installation',
-    },
-    {
-      name: 'Alerts',
-    },
-    {
-      name: 'Buttons',
-    },
-  ];
-
-  buttons: { type: 'elevated' | 'filled' | 'text' | 'tonal' | 'outlined' }[] = [
-    {
-      type: 'elevated',
-    },
-    {
-      type: 'filled',
-    },
-    {
-      type: 'text',
-    },
-    {
-      type: 'tonal',
-    },
-    {
-      type: 'outlined',
-    },
-  ];
-
   handleThemeChange(color: any) {
     const hsl = hexToHsl(color.replace('#', ''));
 

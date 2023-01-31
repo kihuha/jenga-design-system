@@ -1,56 +1,8 @@
 <main class="flex bg-slate-50">
-  <nav class="w-2/12 bg-white h-screen">
-    <h1 class="px-8 py-4 text-2xl font-bold mb-16">Jenga DS</h1>
-
-    <div>
-      <div
-        class="sidebar__item"
-        *ngFor="let item of this.sidebarLinks; let i = index"
-        [ngClass]="{ active: activeIndex === i }"
-      >
-        <span class="text-sm text-slate-500">{{ item.name }}</span>
-      </div>
-    </div>
-  </nav>
-
-  <div class="flex flex-col w-10/12 p-12">
-    <h2 class="text-2xl mb-8">Buttons</h2>
-
-    <div class="bg-white shadow rounded-xl">
-      <div class="grid grid-cols-5 gap-12 py-8">
-        <div
-          class="flex flex-col items-center justify-center self-start col-span-1"
-          *ngFor="let button of buttons; let i = index"
-        >
-          <span class="mb-4 fw-bold">{{ button.type }}</span>
-          <jenga-button
-            label="Button Here"
-            [type]="button.type"
-            size="sm"
-          ></jenga-button>
-        </div>
-      </div>
-      <div class="grid grid-cols-5 gap-12 py-8">
-        <div
-          class="flex flex-col items-center justify-center self-start col-span-1"
-          *ngFor="let button of buttons; let i = index"
-        >
-          <jenga-button label="Button Here" [type]="button.type"></jenga-button>
-        </div>
-      </div>
-
-      <div class="grid grid-cols-5 gap-12 py-8">
-        <div
-          class="flex flex-col items-center justify-center self-start col-span-1"
-          *ngFor="let button of buttons; let i = index"
-        >
-          <jenga-button
-            label="Button Here"
-            [type]="button.type"
-            size="lg"
-          ></jenga-button>
-        </div>
-      </div>
-    </div>
+  <app-sidebar
+    class="fixed top-0 left-0 w-2/12 bg-white h-screen"
+  ></app-sidebar>
+  <div class="flex flex-col w-10/12 ml-auto p-12 min-h-screen">
+    <router-outlet></router-outlet>
   </div>
 </main>
