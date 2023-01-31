@@ -42,7 +42,7 @@
         },
         {
             "name": "Button",
-            "id": "component-Button-80dfa28b3b1d9288279546586515ad5cc0f9fd2340448de3d029be25fda3bf0566d60bb9ba28d8a49a74bf045d19992690e4692c0365cad5b6c01a2cf06a39a9",
+            "id": "component-Button-f2b4e3234a66ad4217ceb095880cd6f1f738553f3b463d6af76ef91a2089643442ed9f4e1a8c4c243514889f8c80b689a37dfd82e572d25220056a97aa5b6b63",
             "file": "projects/jenga-ds/src/lib/button/button.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -51,7 +51,7 @@
             "providers": [],
             "selector": "jenga-button",
             "styleUrls": [
-                "./button.component.css"
+                "./button.component.scss"
             ],
             "styles": [],
             "templateUrl": [
@@ -60,13 +60,45 @@
             "viewProviders": [],
             "inputsClass": [
                 {
+                    "name": "color",
+                    "defaultValue": "'primary'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "pos": 632,
+                            "end": 652,
+                            "flags": 4227072,
+                            "modifierFlagsCache": 0,
+                            "transformFlags": 0,
+                            "kind": 325,
+                            "tagName": {
+                                "pos": 633,
+                                "end": 640,
+                                "flags": 4227072,
+                                "modifierFlagsCache": 0,
+                                "transformFlags": 0,
+                                "kind": 79,
+                                "originalKeywordKind": 88,
+                                "escapedText": "default"
+                            },
+                            "comment": "<p>primary</p>\n"
+                        }
+                    ],
+                    "rawdescription": "\n\nButton color\n\ncan either be 'primary' 'secondary' 'tertiary' 'error' 'warning' 'success' or a valid hex code\n",
+                    "description": "<p>Button color</p>\n<p>can either be &#39;primary&#39; &#39;secondary&#39; &#39;tertiary&#39; &#39;error&#39; &#39;warning&#39; &#39;success&#39; or a valid hex code</p>\n",
+                    "line": 33,
+                    "type": "\"primary\" | \"secondary\" | \"tertiary\" | \"error\" | \"warning\" | \"success\" | string",
+                    "decorators": []
+                },
+                {
                     "name": "icon",
                     "defaultValue": "''",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "rawdescription": "\n\nButton icon\n\noptional\n",
                     "description": "<p>Button icon</p>\n<p>optional</p>\n",
-                    "line": 32,
+                    "line": 48,
                     "type": "string",
                     "decorators": []
                 },
@@ -77,15 +109,15 @@
                     "deprecationMessage": "",
                     "jsdoctags": [
                         {
-                            "pos": 259,
-                            "end": 272,
+                            "pos": 260,
+                            "end": 273,
                             "flags": 4227072,
                             "modifierFlagsCache": 0,
                             "transformFlags": 0,
                             "kind": 325,
                             "tagName": {
-                                "pos": 260,
-                                "end": 268,
+                                "pos": 261,
+                                "end": 269,
                                 "flags": 4227072,
                                 "modifierFlagsCache": 0,
                                 "transformFlags": 0,
@@ -108,7 +140,7 @@
                     "deprecationMessage": "",
                     "rawdescription": "\n\nHow large should the button be?\n",
                     "description": "<p>How large should the button be?</p>\n",
-                    "line": 38,
+                    "line": 54,
                     "type": "\"sm\" | \"md\" | \"lg\"",
                     "decorators": []
                 },
@@ -119,15 +151,15 @@
                     "deprecationMessage": "",
                     "jsdoctags": [
                         {
-                            "pos": 393,
-                            "end": 410,
+                            "pos": 394,
+                            "end": 411,
                             "flags": 4227072,
                             "modifierFlagsCache": 0,
                             "transformFlags": 0,
                             "kind": 325,
                             "tagName": {
-                                "pos": 394,
-                                "end": 401,
+                                "pos": 395,
+                                "end": 402,
                                 "flags": 4227072,
                                 "modifierFlagsCache": 0,
                                 "transformFlags": 0,
@@ -151,7 +183,7 @@
                     "defaultValue": "new EventEmitter<Event>()",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 41,
+                    "line": 57,
                     "type": "EventEmitter"
                 }
             ],
@@ -164,16 +196,16 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component, EventEmitter, Input, Output } from '@angular/core';\n\n@Component({\n  selector: 'jenga-button',\n  templateUrl: './button.component.html',\n  styleUrls: ['./button.component.css'],\n})\nexport class Button {\n  /**\n   * Button contents\n   *\n   * @required\n   */\n  @Input()\n  label = '';\n\n  /**\n   * Button type\n   *\n   * can either be elevated, filled, tonal, outlined, text\n   * @default text\n   */\n  @Input()\n  type: 'elevated' | 'filled' | 'tonal' | 'outlined' | 'text' = 'text';\n\n  /**\n   * Button icon\n   *\n   * optional\n   */\n  @Input()\n  icon: string = '';\n\n  /**\n   * How large should the button be?\n   */\n  @Input()\n  size: 'sm' | 'md' | 'lg' = 'md';\n\n  @Output()\n  onClick = new EventEmitter<Event>();\n}\n",
+            "sourceCode": "import { Component, EventEmitter, Input, Output } from '@angular/core';\n\n@Component({\n  selector: 'jenga-button',\n  templateUrl: './button.component.html',\n  styleUrls: ['./button.component.scss'],\n})\nexport class Button {\n  /**\n   * Button contents\n   *\n   * @required\n   */\n  @Input()\n  label = '';\n\n  /**\n   * Button type\n   *\n   * can either be elevated, filled, tonal, outlined, text\n   * @default text\n   */\n  @Input()\n  type: 'elevated' | 'filled' | 'tonal' | 'outlined' | 'text' = 'text';\n\n  /**\n   * Button color\n   *\n   * can either be 'primary' 'secondary' 'tertiary' 'error' 'warning' 'success' or a valid hex code\n   * @default primary\n   */\n  @Input()\n  color:\n    | 'primary'\n    | 'secondary'\n    | 'tertiary'\n    | 'error'\n    | 'warning'\n    | 'success'\n    | string = 'primary';\n\n  /**\n   * Button icon\n   *\n   * optional\n   */\n  @Input()\n  icon: string = '';\n\n  /**\n   * How large should the button be?\n   */\n  @Input()\n  size: 'sm' | 'md' | 'lg' = 'md';\n\n  @Output()\n  onClick = new EventEmitter<Event>();\n}\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
-                    "data": "button {\n  margin: 0;\n  padding: 0;\n  box-sizing: border-box;\n  font-family: inherit;\n  font-size: 100%;\n  font-weight: inherit;\n  text-transform: none;\n  line-height: inherit;\n  color: inherit;\n  border-width: 0;\n  border-style: solid;\n  cursor: pointer;\n}\n\nbutton,\n[type=\"button\"],\n[type=\"reset\"],\n[type=\"submit\"] {\n  -webkit-appearance: button;\n  background-color: transparent;\n  background-image: none;\n}\n\n.btn {\n  background: var(--btn-background, white);\n}\n",
-                    "styleUrl": "./button.component.css"
+                    "data": "/**\n* The main color reads from the hue, saturation and lightness\n* css custom properties to enable easy adjustment of the lightness\n* as needed\n*/\n$btn-main-color: hsl(\n  var(--btn-main-color-hue, 210),\n  var(--btn-main-color-saturation, 100%),\n  var(--btn-main-color-lightness, 56%)\n);\n\nbutton,\n.btn {\n  margin: 0;\n  padding: 0;\n  box-sizing: border-box;\n  font-family: inherit;\n  font-size: 100%;\n  font-weight: inherit;\n  text-transform: none;\n  line-height: inherit;\n  color: inherit;\n  border-width: 0;\n  border-style: solid;\n  cursor: pointer;\n}\n\nbutton,\n.btn,\n[type=\"button\"],\n[type=\"reset\"],\n[type=\"submit\"] {\n  appearance: button;\n  background-color: transparent;\n  background-image: none;\n}\n\n.btn {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  font-weight: 600;\n  border: solid 1px transparent;\n\n  &--sm {\n    height: 2rem;\n    padding: 0 1rem;\n    font-size: 0.75em;\n    border-radius: 8px;\n    letter-spacing: 0.02em;\n\n    .btn__icon {\n      transform: translateX(-4px);\n      font-size: 1.5em;\n    }\n  }\n\n  &--md {\n    height: 2.5rem;\n    padding: 0 1.5rem;\n    font-size: 0.875em;\n    border-radius: 10px;\n\n    .btn__icon {\n      transform: translateX(-8px);\n      font-size: 1.5em;\n    }\n  }\n\n  &--lg {\n    height: 3.25rem;\n    padding: 0 2.5rem;\n    font-size: 1.2em;\n    border-radius: 12px;\n\n    .btn__icon {\n      transform: translateX(-12px);\n      font-size: 1.5em;\n    }\n  }\n\n  &__icon {\n    transform: translateX(-8px);\n  }\n\n  &--elevated {\n    color: $btn-main-color;\n    background: var(--btn-color, white);\n    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3), 0 1px 3px 1px rgba(0, 0, 0, 0.15);\n  }\n\n  &--filled {\n    background: $btn-main-color;\n    color: var(--btn-color, white);\n  }\n\n  &--tonal {\n    background: hsl(\n      var(--btn-background-hue, 210),\n      var(--btn-background-saturation, 100%),\n      96%\n    );\n    color: var(--btn-color, hsl(210, 100%, 56%));\n  }\n\n  &--outlined {\n    color: $btn-main-color;\n    border-color: $btn-main-color;\n  }\n\n  &--text {\n    color: $btn-main-color;\n    background: transparent;\n    border-color: transparent;\n  }\n}\n",
+                    "styleUrl": "./button.component.scss"
                 }
             ],
             "stylesData": "",
-            "templateData": "<button\n  class=\"btn\"\n  ngClass=\"{\n      'btn--sm': this.size === 'sm',\n      'btn--md': this.size === 'md',\n      'btn--lg': this.size === 'lg'\n    }\"\n>\n  <span *ngIf=\"icon\" class=\"material-symbols-rounded\" data-testid=\"btn-icon\">{{\n    icon\n  }}</span>\n  <span data-testid=\"btn-label\">{{ label }}</span>\n</button>\n"
+            "templateData": "<button\n  class=\"btn\"\n  [ngClass]=\"{\n    'btn--sm': this.size === 'sm',\n    'btn--md': this.size === 'md',\n    'btn--lg': this.size === 'lg',\n    'btn--filled': this.type === 'filled',\n    'btn--outlined': this.type === 'outlined',\n    'btn--text': this.type === 'text',\n    'btn--elevated': this.type === 'elevated',\n    'btn--tonal': this.type === 'tonal'\n  }\"\n>\n  <span\n    *ngIf=\"icon\"\n    class=\"material-symbols-rounded btn__icon\"\n    data-testid=\"btn-icon\"\n    >{{ icon }}</span\n  >\n  <span data-testid=\"btn-label\">{{ label }}</span>\n</button>\n"
         }
     ],
     "modules": [
@@ -234,7 +266,7 @@
                 "name": "Default",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "stories/Alert.stories.ts",
+                "file": "stories/Button.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "",
@@ -244,21 +276,11 @@
                 "name": "Default",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "stories/Button.stories.ts",
+                "file": "stories/Alert.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "",
                 "defaultValue": "Template.bind({})"
-            },
-            {
-                "name": "Template",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "stories/Alert.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Story<Alert>",
-                "defaultValue": "(args: Alert) => ({\n  props: args,\n})"
             },
             {
                 "name": "Template",
@@ -269,6 +291,16 @@
                 "deprecationMessage": "",
                 "type": "Story<Button>",
                 "defaultValue": "(args: Button) => ({\n  props: args,\n})"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "stories/Alert.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story<Alert>",
+                "defaultValue": "(args: Alert) => ({\n  props: args,\n})"
             },
             {
                 "name": "WithIcon",
@@ -285,28 +317,6 @@
         "typealiases": [],
         "enumerations": [],
         "groupedVariables": {
-            "stories/Alert.stories.ts": [
-                {
-                    "name": "Default",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "stories/Alert.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "",
-                    "defaultValue": "Template.bind({})"
-                },
-                {
-                    "name": "Template",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "stories/Alert.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Story<Alert>",
-                    "defaultValue": "(args: Alert) => ({\n  props: args,\n})"
-                }
-            ],
             "stories/Button.stories.ts": [
                 {
                     "name": "Default",
@@ -338,6 +348,28 @@
                     "type": "",
                     "defaultValue": "Template.bind({})"
                 }
+            ],
+            "stories/Alert.stories.ts": [
+                {
+                    "name": "Default",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "stories/Alert.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Template",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "stories/Alert.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story<Alert>",
+                    "defaultValue": "(args: Alert) => ({\n  props: args,\n})"
+                }
             ]
         },
         "groupedFunctions": {},
@@ -346,7 +378,7 @@
     },
     "routes": [],
     "coverage": {
-        "count": 9,
+        "count": 10,
         "status": "low",
         "files": [
             {
@@ -363,8 +395,8 @@
                 "type": "component",
                 "linktype": "component",
                 "name": "Button",
-                "coveragePercent": 66,
-                "coverageCount": "4/6",
+                "coveragePercent": 71,
+                "coverageCount": "5/7",
                 "status": "good"
             },
             {

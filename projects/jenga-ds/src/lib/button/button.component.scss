@@ -1,4 +1,16 @@
-button {
+/**
+* The main color reads from the hue, saturation and lightness
+* css custom properties to enable easy adjustment of the lightness
+* as needed
+*/
+$btn-main-color: hsl(
+  var(--btn-main-color-hue, 210),
+  var(--btn-main-color-saturation, 100%),
+  var(--btn-main-color-lightness, 56%)
+);
+
+button,
+.btn {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -14,6 +26,7 @@ button {
 }
 
 button,
+.btn,
 [type="button"],
 [type="reset"],
 [type="submit"] {
@@ -27,6 +40,7 @@ button,
   align-items: center;
   justify-content: center;
   font-weight: 600;
+  border: solid 1px transparent;
 
   &--sm {
     height: 2rem;
@@ -69,8 +83,34 @@ button,
     transform: translateX(-8px);
   }
 
+  &--elevated {
+    color: $btn-main-color;
+    background: var(--btn-color, white);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3), 0 1px 3px 1px rgba(0, 0, 0, 0.15);
+  }
+
   &--filled {
-    background: var(--btn-background, #1e90ff);
+    background: $btn-main-color;
     color: var(--btn-color, white);
+  }
+
+  &--tonal {
+    background: hsl(
+      var(--btn-background-hue, 210),
+      var(--btn-background-saturation, 100%),
+      96%
+    );
+    color: var(--btn-color, hsl(210, 100%, 56%));
+  }
+
+  &--outlined {
+    color: $btn-main-color;
+    border-color: $btn-main-color;
+  }
+
+  &--text {
+    color: $btn-main-color;
+    background: transparent;
+    border-color: transparent;
   }
 }
