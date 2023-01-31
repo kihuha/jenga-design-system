@@ -9,6 +9,8 @@ $btn-main-color: hsl(
   var(--btn-main-color-lightness, 56%)
 );
 
+$btn-color: black;
+
 button,
 .btn {
   margin: 0;
@@ -96,11 +98,15 @@ button,
 
   &--tonal {
     background: hsl(
-      var(--btn-background-hue, 210),
-      var(--btn-background-saturation, 100%),
+      var(--btn-main-color-hue, 210),
+      var(--btn-main-color-saturation, 100%),
       96%
     );
-    color: var(--btn-color, hsl(210, 100%, 56%));
+    color: hsl(
+      var(--btn-main-color-hue, 210),
+      var(--btn-main-color-saturation, 100%),
+      35%
+    );
   }
 
   &--outlined {

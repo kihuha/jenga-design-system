@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --btn-color: white;
+  --btn-main-color-hue: 350;
+  --btn-main-color-saturation: 85%;
+  --btn-main-color-lightness: 53%;
+
+  --hue: 201;
+  --saturation: 31%; /* here */
+  --lightness: 40;
+  --mainColor: hsl(var(--hue), var(--saturation), var(--lightness));
+}
+
+.material-symbols-outlined {
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 48;
+}

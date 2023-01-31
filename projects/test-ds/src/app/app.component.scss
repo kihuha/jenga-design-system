@@ -1,0 +1,19 @@
+.sidebar {
+  &__item {
+    @apply relative px-8 py-4 hover:bg-slate-100 cursor-pointer;
+
+    &.active {
+      @apply bg-red-50;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 4px;
+        height: 100%;
+        background: red;
+      }
+    }
+  }
+}
