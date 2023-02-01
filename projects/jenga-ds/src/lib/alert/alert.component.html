@@ -2,7 +2,11 @@
   class="alert"
   [ngClass]="{
     'alert--filled': this.type === 'filled',
-    'alert--tonal': this.type === 'tonal'
+    'alert--tonal': this.type === 'tonal',
+    'alert--primary': this.color === 'primary',
+    'alert--secondary': this.color === 'secondary',
+    'alert--warning': this.color === 'warning',
+    'alert--success': this.color === 'success'
   }"
 >
   <ng-content></ng-content>

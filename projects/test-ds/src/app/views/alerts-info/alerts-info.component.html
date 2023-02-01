@@ -1,13 +1,25 @@
 <app-layout title="Alerts">
-  <div class="grid grid-cols-2 gap-x-12">
-    <div class="flex flex-col">
-      <span class="mb-3">Filled</span>
-      <jenga-alert> Alert content is here </jenga-alert>
-    </div>
+  <app-color-selector
+    [colorList]="alertColors"
+    [activeColor]="activeColor"
+    (selectedColorEvent)="this.activeColor = $event"
+  ></app-color-selector>
 
-    <div class="flex flex-col">
-      <span class="mb-3">Tonal</span>
-      <jenga-alert type="tonal"> Alert content is here </jenga-alert>
+  <div class="bg-white shadow rounded-xl p-8">
+    <div class="grid grid-cols-2 gap-x-12">
+      <div class="flex flex-col">
+        <span class="mb-3">Filled</span>
+        <jenga-alert [color]="this.alertColors[activeColor].name">
+          Alert content is here
+        </jenga-alert>
+      </div>
+
+      <div class="flex flex-col">
+        <span class="mb-3">Tonal</span>
+        <jenga-alert type="tonal" [color]="this.alertColors[activeColor].name">
+          Alert content is here
+        </jenga-alert>
+      </div>
     </div>
   </div>
 </app-layout>

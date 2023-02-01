@@ -1,8 +1,27 @@
-$alert-main-color: hsl(
-  var(--alert-main-color-hue, 210),
-  var(--alert-main-color-saturation, 100%),
-  var(--alert-main-color-lightness, 56%)
+$alert-primary-color: hsl(
+  var(--primary-color-hue, 346),
+  var(--primary-color-saturation, 100%),
+  var(--primary-color-lightness, 37%)
 );
+
+$alert-secondary-color: hsl(
+  var(--secondary-color-hue, 319),
+  var(--secondary-color-saturation, 100%),
+  var(--secondary-color-lightness, 35%)
+);
+
+$alert-success-color: hsl(
+  var(--success-color-hue, 161),
+  var(--success-color-saturation, 100%),
+  var(--success-color-lightness, 21%)
+);
+
+$alert-warning-color: hsl(
+  var(--warning-color-hue, 41),
+  var(--warning-color-saturation, 100%),
+  var(--warning-color-lightness, 80%)
+);
+
 $alert-text-color: var(--alert-text-color, white);
 
 .alert {
@@ -16,20 +35,96 @@ $alert-text-color: var(--alert-text-color, white);
   line-height: 20px;
 
   &--filled {
-    background: $alert-main-color;
+    background: $alert-primary-color;
     color: $alert-text-color;
+
+    &.alert--primary {
+      background: $alert-primary-color;
+      color: $alert-text-color;
+    }
+
+    &.alert--secondary {
+      background: $alert-secondary-color;
+      color: $alert-text-color;
+    }
+
+    &.alert--success {
+      background: $alert-success-color;
+      color: $alert-text-color;
+    }
+
+    &.alert--warning {
+      background: hsl(
+        var(--warning-color-hue, 41),
+        var(--warning-color-saturation, 100%),
+        var(--warning-color-lightness, 35%)
+      );
+      color: black;
+    }
   }
 
   &--tonal {
     background: hsl(
-      var(--alert-main-color-hue, 210),
-      var(--alert-main-color-saturation, 100%),
+      var(--primary-color-hue, 210),
+      var(--primary-color-saturation, 100%),
       94%
     );
     color: hsl(
-      var(--alert-main-color-hue, 210),
-      var(--alert-main-color-saturation, 100%),
+      var(--primary-color-hue, 210),
+      var(--primary-color-saturation, 100%),
       36%
     );
+
+    &.alert--primary {
+      background: hsl(
+        var(--primary-color-hue, 346),
+        var(--primary-color-saturation, 100%),
+        94%
+      );
+      color: hsl(
+        var(--primary-color-hue, 346),
+        var(--primary-color-saturation, 100%),
+        36%
+      );
+    }
+
+    &.alert--secondary {
+      background: hsl(
+        var(--secondary-color-hue, 319),
+        var(--secondary-color-saturation, 100%),
+        94%
+      );
+      color: hsl(
+        var(--secondary-color-hue, 319),
+        var(--secondary-color-saturation, 100%),
+        36%
+      );
+    }
+
+    &.alert--success {
+      background: hsl(
+        var(--success-color-hue, 161),
+        var(--success-color-saturation, 100%),
+        94%
+      );
+      color: hsl(
+        var(--success-color-hue, 161),
+        var(--success-color-saturation, 100%),
+        35%
+      );
+    }
+
+    &.alert--warning {
+      background: hsl(
+        var(--warning-color-hue, 41),
+        var(--warning-color-saturation, 100%),
+        94%
+      );
+      color: hsl(
+        var(--warning-color-hue, 41),
+        var(--warning-color-saturation, 100%),
+        25%
+      );
+    }
   }
 }

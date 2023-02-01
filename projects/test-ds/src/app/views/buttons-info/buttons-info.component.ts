@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { TColors } from 'projects/test-ds/types';
 
 @Component({
   selector: 'app-buttons-info',
@@ -24,11 +25,11 @@ export class ButtonsInfoComponent {
     },
   ];
 
-  buttonColors: { name: string; code: string }[] = [
-    { name: 'Primary', code: '#BF002D' },
-    { name: 'Secondary', code: '#B5007D' },
-    { name: 'Success', code: '#006C49' },
-    { name: 'Warning', code: '#FFDF9A' },
+  buttonColors: { name: TColors; code: string }[] = [
+    { name: 'primary', code: '#BF002D' },
+    { name: 'secondary', code: '#B5007D' },
+    { name: 'success', code: '#006C49' },
+    { name: 'warning', code: '#FFDF9A' },
   ];
   activeColor = 0;
 }

@@ -8,4 +8,7 @@ import { Component, Input } from '@angular/core';
 export class Alert {
   @Input()
   type: 'filled' | 'tonal' = 'filled';
+
+  @Input()
+  color: 'primary' | 'secondary' | 'warning' | 'success' = 'primary';
 }

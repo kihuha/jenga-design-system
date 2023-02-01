@@ -4,27 +4,27 @@
 * as needed
 */
 $btn-primary-color: hsl(
-  var(--btn-primary-color-hue, 346),
-  var(--btn-primary-color-saturation, 100%),
-  var(--btn-primary-color-lightness, 37%)
+  var(--primary-color-hue, 346),
+  var(--primary-color-saturation, 100%),
+  var(--primary-color-lightness, 37%)
 );
 
 $btn-secondary-color: hsl(
-  var(--btn-secondary-color-hue, 319),
-  var(--btn-secondary-color-saturation, 100%),
-  var(--btn-secondary-color-lightness, 35%)
+  var(--secondary-color-hue, 319),
+  var(--secondary-color-saturation, 100%),
+  var(--secondary-color-lightness, 35%)
 );
 
 $btn-success-color: hsl(
-  var(--btn-success-color-hue, 161),
-  var(--btn-success-color-saturation, 100%),
-  var(--btn-success-color-lightness, 21%)
+  var(--success-color-hue, 161),
+  var(--success-color-saturation, 100%),
+  var(--success-color-lightness, 21%)
 );
 
-$btn-warning-color: hsl(
-  var(--btn-warning-color-hue, 41),
-  var(--btn-warning-color-saturation, 100%),
-  var(--btn-warning-color-lightness, 80%)
+$warning-color: hsl(
+  var(--warning-color-hue, 41),
+  var(--warning-color-saturation, 100%),
+  var(--warning-color-lightness, 80%)
 );
 
 $btn-color: black;
@@ -131,9 +131,9 @@ button,
 
     &.btn--warning {
       color: hsl(
-        var(--btn-warning-color-hue, 41),
-        var(--btn-warning-color-saturation, 100%),
-        var(--btn-warning-color-lightness, 35%)
+        var(--warning-color-hue, 41),
+        var(--warning-color-saturation, 100%),
+        35%
       );
     }
   }
@@ -155,75 +155,75 @@ button,
     }
 
     &.btn--warning {
-      background: $btn-warning-color;
+      background: $warning-color;
       color: hsl(
-        var(--btn-warning-color-hue, 41),
-        var(--btn-warning-color-saturation, 100%),
-        var(--btn-warning-color-lightness, 20%)
+        var(--warning-color-hue, 41),
+        var(--warning-color-saturation, 100%),
+        20%
       );
     }
   }
 
   &--tonal {
     background: hsl(
-      var(--btn-primary-color-hue, 346),
-      var(--btn-primary-color-saturation, 100%),
+      var(--primary-color-hue, 346),
+      var(--primary-color-saturation, 100%),
       96%
     );
     color: hsl(
-      var(--btn-primary-color-hue, 346),
-      var(--btn-primary-color-saturation, 100%),
+      var(--primary-color-hue, 346),
+      var(--primary-color-saturation, 100%),
       35%
     );
 
     &.btn--primary {
       background: hsl(
-        var(--btn-primary-color-hue, 346),
-        var(--btn-primary-color-saturation, 100%),
+        var(--primary-color-hue, 346),
+        var(--primary-color-saturation, 100%),
         96%
       );
       color: hsl(
-        var(--btn-primary-color-hue, 346),
-        var(--btn-primary-color-saturation, 100%),
+        var(--primary-color-hue, 346),
+        var(--primary-color-saturation, 100%),
         35%
       );
     }
 
     &.btn--secondary {
       background: hsl(
-        var(--btn-secondary-color-hue, 319),
-        var(--btn-secondary-color-saturation, 100%),
+        var(--secondary-color-hue, 319),
+        var(--secondary-color-saturation, 100%),
         96%
       );
       color: hsl(
-        var(--btn-secondary-color-hue, 319),
-        var(--btn-secondary-color-saturation, 100%),
+        var(--secondary-color-hue, 319),
+        var(--secondary-color-saturation, 100%),
         35%
       );
     }
 
     &.btn--success {
       background: hsl(
-        var(--btn-success-color-hue, 161),
-        var(--btn-success-color-saturation, 100%),
+        var(--success-color-hue, 161),
+        var(--success-color-saturation, 100%),
         94%
       );
       color: hsl(
-        var(--btn-success-color-hue, 161),
-        var(--btn-success-color-saturation, 100%),
+        var(--success-color-hue, 161),
+        var(--success-color-saturation, 100%),
         35%
       );
     }
 
     &.btn--warning {
       background: hsl(
-        var(--btn-warning-color-hue, 41),
-        var(--btn-warning-color-saturation, 100%),
+        var(--warning-color-hue, 41),
+        var(--warning-color-saturation, 100%),
         94%
       );
       color: hsl(
-        var(--btn-warning-color-hue, 41),
-        var(--btn-warning-color-saturation, 100%),
+        var(--warning-color-hue, 41),
+        var(--warning-color-saturation, 100%),
         35%
       );
     }
@@ -250,14 +250,14 @@ button,
 
     &.btn--warning {
       color: hsl(
-        var(--btn-warning-color-hue, 41),
-        var(--btn-warning-color-saturation, 100%),
-        var(--btn-warning-color-lightness, 35%)
+        var(--warning-color-hue, 41),
+        var(--warning-color-saturation, 100%),
+        35%
       );
       border-color: hsl(
-        var(--btn-warning-color-hue, 41),
-        var(--btn-warning-color-saturation, 100%),
-        var(--btn-warning-color-lightness, 35%)
+        var(--warning-color-hue, 41),
+        var(--warning-color-saturation, 100%),
+        35%
       );
     }
   }
@@ -281,9 +281,9 @@ button,
 
     &.btn--warning {
       color: hsl(
-        var(--btn-warning-color-hue, 41),
-        var(--btn-warning-color-saturation, 100%),
-        var(--btn-warning-color-lightness, 35%)
+        var(--warning-color-hue, 41),
+        var(--warning-color-saturation, 100%),
+        35%
       );
     }
   }

@@ -3,15 +3,23 @@
 @tailwind utilities;
 
 :root {
-  --alert-text-color: white;
-  --alert-main-color-hue: 350;
-  --alert-main-color-saturation: 85%;
-  --alert-main-color-lightness: 53%;
-
+  --alert-color: white;
   --btn-color: white;
-  --btn-main-color-hue: 350;
-  --btn-main-color-saturation: 85%;
-  --btn-main-color-lightness: 53%;
+  --primary-color-hue: 350;
+  --primary-color-saturation: 85%;
+  --primary-color-lightness: 53%;
+
+  --secondary-color-hue: 319;
+  --secondary-color-saturation: 85%;
+  --secondary-color-lightness: 35%;
+
+  --success-color-hue: 161;
+  --success-color-saturation: 85%;
+  --success-color-lightness: 21%;
+
+  --warning-color-hue: 41;
+  --warning-color-saturation: 85%;
+  --warning-color-lightness: 80%;
 }
 
 .material-symbols-outlined {

@@ -11,6 +11,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { LayoutComponent } from './shared/layout/layout.component';
 import { SidebarComponent } from './shared/sidebar/sidebar.component';
 import { InstallationComponent } from './views/installation/installation.component';
+import { ColorSelectorComponent } from './color-selector/color-selector.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { InstallationComponent } from './views/installation/installation.compone
     LayoutComponent,
     SidebarComponent,
     InstallationComponent,
+    ColorSelectorComponent,
   ],
   imports: [BrowserModule, FormsModule, AppRoutingModule, JengaDsModule],
   providers: [],

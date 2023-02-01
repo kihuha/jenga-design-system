@@ -1,22 +1,9 @@
 <app-layout title="Buttons">
-  <div class="grid grid-cols-6 gap-x-12 justify-between mb-8">
-    <div
-      *ngFor="let color of buttonColors; let i = index"
-      class="color__selector-item"
-      [ngClass]="{ active: activeColor === i }"
-      (click)="this.activeColor = i"
-    >
-      <div
-        class="w-16 h-16 rounded-2xl"
-        [ngStyle]="{ background: color.code }"
-      ></div>
-
-      <div class="flex flex-col">
-        <span class="font-bold">{{ color.name }}</span>
-        <span class="text-sm">{{ color.code }}</span>
-      </div>
-    </div>
-  </div>
+  <app-color-selector
+    [colorList]="buttonColors"
+    [activeColor]="activeColor"
+    (selectedColorEvent)="this.activeColor = $event"
+  ></app-color-selector>
 
   <div class="bg-white shadow rounded-xl">
     <div class="grid grid-cols-5 gap-12 py-8">
@@ -28,7 +15,7 @@
         <jenga-button
           label="Button Here"
           [type]="button.type"
-          [color]="this.buttonColors[activeColor].name.toLowerCase()"
+          [color]="this.buttonColors[activeColor].name"
           size="sm"
         ></jenga-button>
       </div>
@@ -41,7 +28,7 @@
         <jenga-button
           label="Button Here"
           [type]="button.type"
-          [color]="this.buttonColors[activeColor].name.toLowerCase()"
+          [color]="this.buttonColors[activeColor].name"
         ></jenga-button>
       </div>
     </div>
@@ -54,7 +41,7 @@
         <jenga-button
           label="Button Here"
           [type]="button.type"
-          [color]="this.buttonColors[activeColor].name.toLowerCase()"
+          [color]="this.buttonColors[activeColor].name"
           size="lg"
         ></jenga-button>
       </div>
