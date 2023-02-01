@@ -1,0 +1,11 @@
+<div class="relative col-span-7 bg-white shadow-lg">
+  <button
+    class="absolute top-4 right-4 flex items-center justify-center w-12 h-12 p-2 rounded-full bg-white shadow-xl z-50"
+    [ngClass]="{ 'bg-green-600 text-white pointer-events-none': copied }"
+    (click)="handleCopy(code)"
+  >
+    <span class="material-symbols-outlined" *ngIf="!copied">content_paste</span>
+    <span class="material-symbols-outlined" *ngIf="copied">check</span>
+  </button>
+  <div #htmlCode></div>
+</div>

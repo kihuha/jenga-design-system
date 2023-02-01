@@ -12,6 +12,10 @@ import { LayoutComponent } from './shared/layout/layout.component';
 import { SidebarComponent } from './shared/sidebar/sidebar.component';
 import { InstallationComponent } from './views/installation/installation.component';
 import { ColorSelectorComponent } from './color-selector/color-selector.component';
+import { DialogComponent } from './views/alerts-info/widgets/dialog/dialog.component';
+
+import { ClipboardModule } from '@angular/cdk/clipboard';
+import { CodeViewComponent } from './shared/code-view/code-view.component';
 
 @NgModule({
   declarations: [
@@ -23,8 +27,16 @@ import { ColorSelectorComponent } from './color-selector/color-selector.componen
     SidebarComponent,
     InstallationComponent,
     ColorSelectorComponent,
+    DialogComponent,
+    CodeViewComponent,
   ],
-  imports: [BrowserModule, FormsModule, AppRoutingModule, JengaDsModule],
+  imports: [
+    BrowserModule,
+    FormsModule,
+    AppRoutingModule,
+    JengaDsModule,
+    ClipboardModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })

@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { TColors } from 'projects/test-ds/types';
+import { rawWiddgetCode } from './widgets/widgetCodes';
 
 @Component({
   selector: 'app-alerts-info',
@@ -14,4 +15,6 @@ export class AlertsInfoComponent {
     { name: 'warning', code: '#FFDF9A' },
   ];
   activeColor = 0;
+
+  rawCodes = rawWiddgetCode;
 }
