@@ -23,4 +23,12 @@ export class ButtonsInfoComponent {
       type: 'outlined',
     },
   ];
+
+  buttonColors: { name: string; code: string }[] = [
+    { name: 'Primary', code: '#BF002D' },
+    { name: 'Secondary', code: '#B5007D' },
+    { name: 'Success', code: '#006C49' },
+    { name: 'Warning', code: '#FFDF9A' },
+  ];
+  activeColor = 0;
 }

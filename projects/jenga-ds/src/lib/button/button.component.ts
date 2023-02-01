@@ -30,14 +30,7 @@ export class Button {
    * @default primary
    */
   @Input()
-  color:
-    | 'primary'
-    | 'secondary'
-    | 'tertiary'
-    | 'error'
-    | 'warning'
-    | 'success'
-    | string = 'primary';
+  color: 'primary' | 'secondary' | 'warning' | 'success' | string = 'primary';
 
   /**
    * Button icon

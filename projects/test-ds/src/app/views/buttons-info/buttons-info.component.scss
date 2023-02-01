@@ -1,0 +1,9 @@
+.color {
+  &__selector-item {
+    @apply flex items-center rounded-3xl p-3 gap-4 bg-white shadow-sm border-2 cursor-pointer;
+
+    &.active {
+      @apply border-2 border-blue-500 shadow-lg;
+    }
+  }
+}

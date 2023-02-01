@@ -3,10 +3,28 @@
 * css custom properties to enable easy adjustment of the lightness
 * as needed
 */
-$btn-main-color: hsl(
-  var(--btn-main-color-hue, 210),
-  var(--btn-main-color-saturation, 100%),
-  var(--btn-main-color-lightness, 56%)
+$btn-primary-color: hsl(
+  var(--btn-primary-color-hue, 346),
+  var(--btn-primary-color-saturation, 100%),
+  var(--btn-primary-color-lightness, 37%)
+);
+
+$btn-secondary-color: hsl(
+  var(--btn-secondary-color-hue, 319),
+  var(--btn-secondary-color-saturation, 100%),
+  var(--btn-secondary-color-lightness, 35%)
+);
+
+$btn-success-color: hsl(
+  var(--btn-success-color-hue, 161),
+  var(--btn-success-color-saturation, 100%),
+  var(--btn-success-color-lightness, 21%)
+);
+
+$btn-warning-color: hsl(
+  var(--btn-warning-color-hue, 41),
+  var(--btn-warning-color-saturation, 100%),
+  var(--btn-warning-color-lightness, 80%)
 );
 
 $btn-color: black;
@@ -94,38 +112,179 @@ button,
   }
 
   &--elevated {
-    color: $btn-main-color;
+    color: $btn-primary-color;
     background: var(--btn-color, white);
     box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2),
       0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12);
+
+    &.btn--primary {
+      color: $btn-primary-color;
+    }
+
+    &.btn--secondary {
+      color: $btn-secondary-color;
+    }
+
+    &.btn--success {
+      color: $btn-success-color;
+    }
+
+    &.btn--warning {
+      color: hsl(
+        var(--btn-warning-color-hue, 41),
+        var(--btn-warning-color-saturation, 100%),
+        var(--btn-warning-color-lightness, 35%)
+      );
+    }
   }
 
   &--filled {
-    background: $btn-main-color;
-    color: var(--btn-color, white);
+    background: $btn-primary-color;
+    color: white;
+
+    &.btn--primary {
+      background: $btn-primary-color;
+    }
+
+    &.btn--secondary {
+      background: $btn-secondary-color;
+    }
+
+    &.btn--success {
+      background: $btn-success-color;
+    }
+
+    &.btn--warning {
+      background: $btn-warning-color;
+      color: hsl(
+        var(--btn-warning-color-hue, 41),
+        var(--btn-warning-color-saturation, 100%),
+        var(--btn-warning-color-lightness, 20%)
+      );
+    }
   }
 
   &--tonal {
     background: hsl(
-      var(--btn-main-color-hue, 210),
-      var(--btn-main-color-saturation, 100%),
+      var(--btn-primary-color-hue, 346),
+      var(--btn-primary-color-saturation, 100%),
       96%
     );
     color: hsl(
-      var(--btn-main-color-hue, 210),
-      var(--btn-main-color-saturation, 100%),
+      var(--btn-primary-color-hue, 346),
+      var(--btn-primary-color-saturation, 100%),
       35%
     );
+
+    &.btn--primary {
+      background: hsl(
+        var(--btn-primary-color-hue, 346),
+        var(--btn-primary-color-saturation, 100%),
+        96%
+      );
+      color: hsl(
+        var(--btn-primary-color-hue, 346),
+        var(--btn-primary-color-saturation, 100%),
+        35%
+      );
+    }
+
+    &.btn--secondary {
+      background: hsl(
+        var(--btn-secondary-color-hue, 319),
+        var(--btn-secondary-color-saturation, 100%),
+        96%
+      );
+      color: hsl(
+        var(--btn-secondary-color-hue, 319),
+        var(--btn-secondary-color-saturation, 100%),
+        35%
+      );
+    }
+
+    &.btn--success {
+      background: hsl(
+        var(--btn-success-color-hue, 161),
+        var(--btn-success-color-saturation, 100%),
+        94%
+      );
+      color: hsl(
+        var(--btn-success-color-hue, 161),
+        var(--btn-success-color-saturation, 100%),
+        35%
+      );
+    }
+
+    &.btn--warning {
+      background: hsl(
+        var(--btn-warning-color-hue, 41),
+        var(--btn-warning-color-saturation, 100%),
+        94%
+      );
+      color: hsl(
+        var(--btn-warning-color-hue, 41),
+        var(--btn-warning-color-saturation, 100%),
+        35%
+      );
+    }
   }
 
   &--outlined {
-    color: $btn-main-color;
-    border-color: $btn-main-color;
+    color: $btn-primary-color;
+    border-color: $btn-primary-color;
+
+    &.btn--primary {
+      color: $btn-primary-color;
+      border-color: $btn-primary-color;
+    }
+
+    &.btn--secondary {
+      color: $btn-secondary-color;
+      border-color: $btn-secondary-color;
+    }
+
+    &.btn--success {
+      color: $btn-success-color;
+      border-color: $btn-success-color;
+    }
+
+    &.btn--warning {
+      color: hsl(
+        var(--btn-warning-color-hue, 41),
+        var(--btn-warning-color-saturation, 100%),
+        var(--btn-warning-color-lightness, 35%)
+      );
+      border-color: hsl(
+        var(--btn-warning-color-hue, 41),
+        var(--btn-warning-color-saturation, 100%),
+        var(--btn-warning-color-lightness, 35%)
+      );
+    }
   }
 
   &--text {
-    color: $btn-main-color;
+    color: $btn-primary-color;
     background: transparent;
     border-color: transparent;
+
+    &.btn--primary {
+      color: $btn-primary-color;
+    }
+
+    &.btn--secondary {
+      color: $btn-secondary-color;
+    }
+
+    &.btn--success {
+      color: $btn-success-color;
+    }
+
+    &.btn--warning {
+      color: hsl(
+        var(--btn-warning-color-hue, 41),
+        var(--btn-warning-color-saturation, 100%),
+        var(--btn-warning-color-lightness, 35%)
+      );
+    }
   }
 }

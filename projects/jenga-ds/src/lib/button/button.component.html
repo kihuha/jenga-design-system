@@ -8,10 +8,13 @@
     'btn--outlined': this.type === 'outlined',
     'btn--text': this.type === 'text',
     'btn--elevated': this.type === 'elevated',
-    'btn--tonal': this.type === 'tonal'
+    'btn--tonal': this.type === 'tonal',
+    'btn--primary': this.color === 'primary',
+    'btn--secondary': this.color === 'secondary',
+    'btn--warning': this.color === 'warning',
+    'btn--success': this.color === 'success'
   }"
 >
-  <!-- TODO: ADD COLOR ADJUSTMENTS -->
   <span
     *ngIf="icon"
     class="material-symbols-rounded btn__icon"
