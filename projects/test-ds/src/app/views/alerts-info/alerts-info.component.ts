@@ -8,12 +8,7 @@ import { rawWiddgetCode } from './widgets/widgetCodes';
   styleUrls: ['./alerts-info.component.scss'],
 })
 export class AlertsInfoComponent {
-  alertColors: { name: TColors; code: string }[] = [
-    { name: 'primary', code: '#BF002D' },
-    { name: 'secondary', code: '#B5007D' },
-    { name: 'success', code: '#006C49' },
-    { name: 'warning', code: '#FFDF9A' },
-  ];
+  alertColors: any[] = ['primary', 'secondary', 'success', 'warning'];
   activeColor = 0;
 
   rawCodes = rawWiddgetCode;

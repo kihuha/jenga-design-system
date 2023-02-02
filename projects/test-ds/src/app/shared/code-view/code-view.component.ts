@@ -62,6 +62,7 @@ export class CodeViewComponent {
         language.of(html()),
         tabSize.of(EditorState.tabSize.of(8)),
         myTheme,
+        EditorView.editable.of(false),
       ],
     });
 
@@ -69,5 +70,7 @@ export class CodeViewComponent {
       state: htmlState,
       parent: this.htmlCode.nativeElement,
     });
+
+    htmlView;
   }
 }

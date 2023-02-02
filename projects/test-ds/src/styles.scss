@@ -25,3 +25,21 @@
 .material-symbols-outlined {
   font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 48;
 }
+
+.doc {
+  &-attribute {
+    @apply font-medium text-primary-500;
+
+    &-indicator {
+      @apply text-blue-500 font-bold ml-8;
+
+      &::before {
+        content: "{";
+      }
+
+      &::after {
+        content: "}";
+      }
+    }
+  }
+}

@@ -1,30 +1,85 @@
 <app-layout title="Alerts">
-  <app-color-selector
-    [colorList]="alertColors"
-    [activeColor]="activeColor"
-    (selectedColorEvent)="this.activeColor = $event"
-  ></app-color-selector>
-
+  <h3 class="text-xl mb-6">01. Visuals</h3>
   <div class="bg-white shadow rounded-xl p-8">
-    <div class="grid grid-cols-2 gap-x-12">
-      <div class="flex flex-col">
-        <span class="mb-3">Filled</span>
-        <jenga-alert [color]="this.alertColors[activeColor].name">
-          Alert content is here
-        </jenga-alert>
+    <div class="">
+      <div class="grid grid-cols-12 gap-x-12 mb-4">
+        <span class="col-span-2"></span>
+        <span class="col-span-5">Filled</span>
+        <span class="col-span-5">Tonal</span>
       </div>
 
-      <div class="flex flex-col">
-        <span class="mb-3">Tonal</span>
-        <jenga-alert type="tonal" [color]="this.alertColors[activeColor].name">
-          Alert content is here
-        </jenga-alert>
+      <div
+        class="grid grid-cols-12 gap-x-12 mt-8"
+        *ngFor="let color of this.alertColors"
+      >
+        <div class="col-span-2">
+          <span>{{ color }}</span>
+        </div>
+        <div class="col-span-5">
+          <jenga-alert type="filled" [color]="color">
+            Alert content is here
+          </jenga-alert>
+        </div>
+
+        <div class="col-span-5">
+          <jenga-alert type="tonal" [color]="color">
+            Alert content is here
+          </jenga-alert>
+        </div>
       </div>
     </div>
   </div>
 
-  <div class="my-8">
-    <h3 class="text-xl mb-6">Sample Widgets</h3>
+  <hr class="border border-slate-200 my-8" />
+
+  <div>
+    <h3 class="text-xl mb-6">02. API</h3>
+
+    <div class="bg-white shadow p-8 rounded-xl">
+      <dl>
+        <div
+          class="bg-gray-50 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6"
+        >
+          <dt class="doc-attribute">
+            type <span class="doc-attribute-indicator">attribute</span>
+          </dt>
+          <dd class="mt-1 text-sm text-gray-900 leading-8">
+            <p>
+              Alert components can either be
+              <span class="font-bold text-blue-500">Filled</span> or
+              <span class="font-bold text-blue-500">Tonal</span>
+            </p>
+            <p>
+              Use filled alerts for high emphasis and tonal for low emphasis
+            </p>
+          </dd>
+        </div>
+        <div class="bg-white px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+          <dt class="text-gray-500 doc-attribute">
+            color <span class="doc-attribute-indicator">attribute</span>
+          </dt>
+          <dd class="mt-1 text-sm text-gray-900 leading-8">
+            <p>
+              This attribute specifies the desired color of the alert component.
+              Allowed values are
+              <span class="font-bold text-primary-500">primary</span>,
+              <span class="font-bold text-secondary-500">secondary</span>,
+              <span class="font-bold text-success-500">success</span> and
+              <span class="font-bold text-warning-500">warning</span>,
+            </p>
+            <p>
+              Usage depends on the intended purpose of showing the alert e.g.
+              Use success for appropriate, good or successful actions.
+            </p>
+          </dd>
+        </div>
+      </dl>
+    </div>
+  </div>
+
+  <hr class="border border-slate-200 my-8" />
+  <div>
+    <h3 class="text-xl mb-6">03. Sample Widgets</h3>
     <div class="flex flex-col gap-y-12">
       <div class="grid grid-cols-12 gap-x-6">
         <div class="col-span-5">

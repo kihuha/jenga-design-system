@@ -1,130 +1,35 @@
-$alert-primary-color: hsl(
-  var(--primary-color-hue, 346),
-  var(--primary-color-saturation, 100%),
-  var(--primary-color-lightness, 37%)
-);
-
-$alert-secondary-color: hsl(
-  var(--secondary-color-hue, 319),
-  var(--secondary-color-saturation, 100%),
-  var(--secondary-color-lightness, 35%)
-);
-
-$alert-success-color: hsl(
-  var(--success-color-hue, 161),
-  var(--success-color-saturation, 100%),
-  var(--success-color-lightness, 21%)
-);
-
-$alert-warning-color: hsl(
-  var(--warning-color-hue, 41),
-  var(--warning-color-saturation, 100%),
-  var(--warning-color-lightness, 80%)
-);
-
-$alert-text-color: var(--alert-text-color, white);
-
 .alert {
-  display: flex;
-  padding: 1rem;
-  width: 100%;
-  height: 100%;
-  border-radius: 10px;
-  font-weight: 600;
-  font-size: 14px;
-  line-height: 20px;
+  @apply flex items-center gap-2 w-full h-full p-4 rounded-lg font-semibold text-sm leading-5;
 
-  &--filled {
-    background: $alert-primary-color;
-    color: $alert-text-color;
-
-    &.alert--primary {
-      background: $alert-primary-color;
-      color: $alert-text-color;
-    }
-
-    &.alert--secondary {
-      background: $alert-secondary-color;
-      color: $alert-text-color;
-    }
-
-    &.alert--success {
-      background: $alert-success-color;
-      color: $alert-text-color;
-    }
-
-    &.alert--warning {
-      background: hsl(
-        var(--warning-color-hue, 41),
-        var(--warning-color-saturation, 100%),
-        var(--warning-color-lightness, 35%)
-      );
-      color: black;
-    }
+  &--filled.alert--primary {
+    @apply bg-primary-500 text-white;
   }
 
-  &--tonal {
-    background: hsl(
-      var(--primary-color-hue, 210),
-      var(--primary-color-saturation, 100%),
-      94%
-    );
-    color: hsl(
-      var(--primary-color-hue, 210),
-      var(--primary-color-saturation, 100%),
-      36%
-    );
+  &--filled.alert--secondary {
+    @apply bg-secondary-500 text-white;
+  }
 
-    &.alert--primary {
-      background: hsl(
-        var(--primary-color-hue, 346),
-        var(--primary-color-saturation, 100%),
-        94%
-      );
-      color: hsl(
-        var(--primary-color-hue, 346),
-        var(--primary-color-saturation, 100%),
-        36%
-      );
-    }
+  &--filled.alert--success {
+    @apply bg-success-500 text-white;
+  }
 
-    &.alert--secondary {
-      background: hsl(
-        var(--secondary-color-hue, 319),
-        var(--secondary-color-saturation, 100%),
-        94%
-      );
-      color: hsl(
-        var(--secondary-color-hue, 319),
-        var(--secondary-color-saturation, 100%),
-        36%
-      );
-    }
+  &--filled.alert--warning {
+    @apply bg-warning-100 text-black;
+  }
 
-    &.alert--success {
-      background: hsl(
-        var(--success-color-hue, 161),
-        var(--success-color-saturation, 100%),
-        94%
-      );
-      color: hsl(
-        var(--success-color-hue, 161),
-        var(--success-color-saturation, 100%),
-        35%
-      );
-    }
+  &--tonal.alert--primary {
+    @apply bg-primary-50 text-primary-700 border border-primary-100;
+  }
 
-    &.alert--warning {
-      background: hsl(
-        var(--warning-color-hue, 41),
-        var(--warning-color-saturation, 100%),
-        94%
-      );
-      color: hsl(
-        var(--warning-color-hue, 41),
-        var(--warning-color-saturation, 100%),
-        25%
-      );
-    }
+  &--tonal.alert--secondary {
+    @apply bg-secondary-50 text-secondary-700 border border-secondary-100;
+  }
+
+  &--tonal.alert--success {
+    @apply bg-success-50 text-success-700 border border-success-100;
+  }
+
+  &--tonal.alert--warning {
+    @apply bg-warning-50 text-warning-700 border border-warning-100;
   }
 }

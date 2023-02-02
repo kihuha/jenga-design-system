@@ -26,6 +26,10 @@ export class SidebarComponent {
       name: 'Buttons',
       link: '/buttons',
     },
+    {
+      name: 'TextField',
+      link: '/textfield',
+    },
   ];
 
   url: any;

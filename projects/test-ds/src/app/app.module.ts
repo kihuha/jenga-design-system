@@ -16,6 +16,7 @@ import { DialogComponent } from './views/alerts-info/widgets/dialog/dialog.compo
 
 import { ClipboardModule } from '@angular/cdk/clipboard';
 import { CodeViewComponent } from './shared/code-view/code-view.component';
+import { TextfieldInfoComponent } from './views/textfield-info/textfield-info.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { CodeViewComponent } from './shared/code-view/code-view.component';
     ColorSelectorComponent,
     DialogComponent,
     CodeViewComponent,
+    TextfieldInfoComponent,
   ],
   imports: [
     BrowserModule,
