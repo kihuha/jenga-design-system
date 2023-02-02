@@ -1,37 +1,14 @@
-import {
-  Directive,
-  ElementRef,
-  HostBinding,
-  HostListener,
-} from '@angular/core';
+import { Directive, Input } from '@angular/core';
 
 @Directive({
   selector: 'input[jengaInput]',
   host: {
-    class: 'bg-blue-500 text-2xl',
+    class:
+      'block w-full rounded-md border border-slate-300 px-4 py-3 focus:outline-none focus:ring focus:ring-primary-200 text-sm tracking-wide',
   },
 })
 export class InputDirective {
-  // @HostBinding('style.padding') value = '20px';
+  constructor() {}
 
-  constructor(private el: ElementRef) {
-    this.el.nativeElement.style.padding = '0.5rem 1rem';
-    // this.el.nativeElement.style.fontSize = '0.875em';
-    this.el.nativeElement.style.letterSpacing = '0.04em';
-    this.el.nativeElement.style.border = 'solid 1px #ccc';
-    this.el.nativeElement.style.borderRadius = '8px';
-  }
-
-  @HostListener('focus') onFocus() {
-    this.el.nativeElement.style.outline = 'none';
-    this.el.nativeElement.style.border = `solid 1px  hsl(
-      var(--primary-color-hue, 350)
-      var(--primary-color-saturation, 85%)
-      80%
-    )`;
-  }
-
-  @HostListener('focusout') onFocusOut() {
-    this.el.nativeElement.style.border = 'solid 1px #ccc';
-  }
+  @Input('formControlName') name: string = '';
 }

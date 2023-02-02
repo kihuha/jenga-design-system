@@ -1,3 +1,27 @@
-<div class="input-wrappers">
-  <ng-content></ng-content>
+<div #label class="mb-1">
+  <ng-content select="[jengaLabel]"></ng-content>
+</div>
+
+<div class="input-wrapper">
+  <div
+    #startIcon
+    class="absolute flex items-center justify-center w-6 h-6 left-2"
+  >
+    <ng-content select="[iconStart]"></ng-content>
+  </div>
+
+  <div #input class="w-full">
+    <ng-content select="[jengaInput]"></ng-content>
+  </div>
+
+  <div
+    #endIcon
+    class="absolute flex items-center justify-center w-6 h-6 right-2"
+  >
+    <ng-content select="[iconEnd]"></ng-content>
+  </div>
+</div>
+
+<div #hint>
+  <ng-content select="[jengaHint]"></ng-content>
 </div>

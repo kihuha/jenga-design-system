@@ -1,5 +1,93 @@
 <app-layout title="Textfield">
-  <jenga-textfield>
-    <input jengaInput />
-  </jenga-textfield>
+  <h3 class="text-xl mb-6">01. Visuals</h3>
+  <div class="bg-white shadow rounded-xl p-8">
+    <div>
+      <div class="grid grid-cols-3 gap-8 text-center mb-6">
+        <span>Default</span>
+        <span>With Leading Icon</span>
+        <span>With Trailing Icon</span>
+      </div>
+
+      <div class="grid grid-cols-3 gap-8">
+        <jenga-textfield>
+          <input jengaInput type="text" />
+        </jenga-textfield>
+        <jenga-textfield>
+          <i class="material-symbols-outlined" iconStart>search</i>
+          <input jengaInput type="text" />
+        </jenga-textfield>
+        <jenga-textfield>
+          <input jengaInput type="text" />
+          <i class="material-symbols-outlined" iconEnd>visibility</i>
+        </jenga-textfield>
+      </div>
+
+      <div class="grid grid-cols-3 gap-8 mt-8">
+        <jenga-textfield>
+          <label jengaLabel for="input-1">First Name</label>
+          <input jengaInput type="text" id="input-1" />
+        </jenga-textfield>
+        <jenga-textfield>
+          <label jengaLabel for="input-2">First Name</label>
+          <i class="material-symbols-outlined" iconStart>search</i>
+          <input jengaInput type="text" id="input-2" />
+        </jenga-textfield>
+        <jenga-textfield>
+          <label jengaLabel for="input-3">First Name</label>
+          <input jengaInput type="text" id="input-3" />
+          <i class="material-symbols-outlined" iconEnd>visibility</i>
+        </jenga-textfield>
+      </div>
+
+      <div class="grid grid-cols-3 gap-8 mt-8">
+        <jenga-textfield>
+          <label jengaLabel for="input-4">First Name</label>
+          <input jengaInput type="text" id="input-4" />
+          <small jengaHint>Type your first name</small>
+        </jenga-textfield>
+        <jenga-textfield>
+          <label jengaLabel for="input-5">First Name</label>
+          <i class="material-symbols-outlined" iconStart>search</i>
+          <input jengaInput type="text" id="input-5" />
+          <small jengaHint>Type your first name</small>
+        </jenga-textfield>
+        <jenga-textfield>
+          <label jengaLabel for="input-6">First Name</label>
+          <input jengaInput type="text" id="input-6" />
+          <i class="material-symbols-outlined" iconEnd>visibility</i>
+          <small jengaHint>Type your first name</small>
+        </jenga-textfield>
+      </div>
+    </div>
+  </div>
+
+  <hr class="border border-slate-200 my-8" />
+
+  <h3 class="text-xl mb-6">03. Widgets</h3>
+  <div class="bg-white shadow rounded-xl p-8">
+    <div class="grid grid-cols-2">
+      <div>
+        <form [formGroup]="testForm" (submit)="handleTestSubmit($event)">
+          <jenga-textfield>
+            <label jengaLabel for="passwordID">Password</label>
+            <input
+              jengaInput
+              type="password"
+              name="password"
+              id="passwordID"
+              formControlName="password"
+            />
+          </jenga-textfield>
+
+          <div class="my-4">
+            <jenga-button label="Submit" type="filled" />
+          </div>
+        </form>
+        <div>
+          {{ this.testForm.value | json }}
+        </div>
+      </div>
+      <div>Code here</div>
+    </div>
+  </div>
 </app-layout>
