@@ -23,13 +23,23 @@
 }
 
 .material-symbols-outlined {
-  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 48;
+  font-variation-settings: "FILL" 0, "wght" 300, "GRAD" 0, "opsz" 48;
 }
 
 .doc {
-  &-attribute {
-    @apply font-medium text-primary-500;
+  &-item {
+    @apply px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6;
 
+    &:nth-child(even) {
+      @apply bg-gray-50;
+    }
+  }
+
+  &-title {
+    @apply font-medium text-primary-500;
+  }
+
+  &-attribute {
     &-indicator {
       @apply text-blue-500 font-bold ml-8;
 
@@ -41,5 +51,9 @@
         content: "}";
       }
     }
+  }
+
+  &-content {
+    @apply mt-1 text-sm text-gray-900 leading-8;
   }
 }
