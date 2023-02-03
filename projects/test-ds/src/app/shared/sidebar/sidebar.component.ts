@@ -19,6 +19,10 @@ export class SidebarComponent {
       link: '/installation',
     },
     {
+      name: 'Accordion',
+      link: '/accordion',
+    },
+    {
       name: 'Alerts',
       link: '/alerts',
     },

@@ -12,6 +12,7 @@ import {
   FormsModule,
   ReactiveFormsModule,
 } from '@angular/forms';
+import { AccordionComponent } from './accordion/accordion.component';
 
 @NgModule({
   declarations: [
@@ -21,9 +22,11 @@ import {
     InputDirective,
     LabelDirective,
     HintDirective,
+    AccordionComponent,
   ],
   imports: [BrowserModule, FormsModule, ReactiveFormsModule],
   exports: [
+    AccordionComponent,
     Alert,
     Button,
     Textfield,

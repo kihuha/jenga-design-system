@@ -20,6 +20,7 @@ import { DialogComponent } from './views/alerts-info/widgets/dialog/dialog.compo
 import { ClipboardModule } from '@angular/cdk/clipboard';
 import { CodeViewComponent } from './shared/code-view/code-view.component';
 import { TextfieldInfoComponent } from './views/textfield-info/textfield-info.component';
+import { AccordionInfoComponent } from './views/accordion-info/accordion-info.component';
 
 @NgModule({
   declarations: [
@@ -33,6 +34,7 @@ import { TextfieldInfoComponent } from './views/textfield-info/textfield-info.co
     DialogComponent,
     CodeViewComponent,
     TextfieldInfoComponent,
+    AccordionInfoComponent,
   ],
   imports: [
     BrowserModule,

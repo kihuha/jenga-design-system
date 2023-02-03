@@ -1,0 +1,28 @@
+<div class="accordion">
+  <div *ngFor="let item of children; let i = index" class="accordion-item mb-4">
+    <div
+      [attr.data-accordion]="this.openItems[i]"
+      class="flex items-center h-12 px-12 bg-blue-100 text-blue-800 cursor-pointer peer"
+      (click)="toggleAccordion(i)"
+    >
+      Header
+    </div>
+
+    <!-- prettier-ignore -->
+    <div
+      class="
+      accordion-item-content
+      "
+    >
+     <div>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat
+      voluptatum quia veritatis, quas nisi fuga voluptatem repellendus suscipit.
+      Dolor, ullam natus ipsa impedit quo laboriosam delectus voluptatibus
+      fugiat corrupti culpa? Lorem ipsum dolor sit amet consectetur adipisicing
+      elit. Placeat voluptatum quia veritatis, quas nisi fuga voluptatem
+      repellendus suscipit. Dolor, ullam natus ipsa impedit quo laboriosam
+      delectus voluptatibus fugiat corrupti culpa?
+     </div>
+    </div>
+  </div>
+</div>

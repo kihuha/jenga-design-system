@@ -1,0 +1,6 @@
+.accordion-item-content {
+  @apply text-sm leading-7 text-slate-500 max-h-0 opacity-0
+      peer-data-[accordion~='open']:max-h-10
+      peer-data-[accordion~='open']:opacity-100
+      transition-all;
+}

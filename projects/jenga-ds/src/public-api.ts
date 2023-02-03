@@ -4,6 +4,7 @@
 
 export * from './lib/jenga-ds.module';
 
+export * from './lib/accordion/accordion.component';
 export * from './lib/alert/alert.component';
 export * from './lib/button/button.component';
 export * from './lib/textfield/textfield.component';
