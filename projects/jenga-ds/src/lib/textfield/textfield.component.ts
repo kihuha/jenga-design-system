@@ -1,4 +1,4 @@
-import { Component, ElementRef, ViewChild } from '@angular/core';
+import { Component, ElementRef, Input, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'jenga-textfield',
@@ -9,6 +9,9 @@ export class Textfield {
   @ViewChild('startIcon') startIcon!: ElementRef<HTMLDivElement>;
   @ViewChild('input') input!: ElementRef<HTMLDivElement>;
   @ViewChild('endIcon') endIcon!: ElementRef<HTMLDivElement>;
+
+  @Input()
+  error: string | null = null;
 
   constructor() {}
 
@@ -27,6 +30,16 @@ export class Textfield {
      */
     if (this.endIcon.nativeElement.children.length > 0) {
       this.input.nativeElement.firstElementChild?.classList.add('pr-10');
+    }
+
+    /**
+     * If an error is present, highlight the input field appropriately
+     */
+
+    if (this.error) {
+      this.input.nativeElement.firstElementChild?.classList.add(
+        'border-red-500'
+      );
     }
   }
 }

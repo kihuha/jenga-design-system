@@ -64,30 +64,42 @@
   <hr class="border border-slate-200 my-8" />
 
   <h3 class="text-xl mb-6">03. Widgets</h3>
-  <div class="bg-white shadow rounded-xl p-8">
-    <div class="grid grid-cols-2">
-      <div>
-        <form [formGroup]="testForm" (submit)="handleTestSubmit($event)">
-          <jenga-textfield>
-            <label jengaLabel for="passwordID">Password</label>
-            <input
-              jengaInput
-              type="password"
-              name="password"
-              id="passwordID"
-              formControlName="password"
-            />
-          </jenga-textfield>
 
-          <div class="my-4">
-            <jenga-button label="Submit" type="filled" />
-          </div>
-        </form>
-        <div>
-          {{ this.testForm.value | json }}
-        </div>
+  <div class="bg-white shadow rounded-xl p-8">
+    <div class="grid grid-cols-2 gap-x-12">
+      <div>
+        <jenga-textfield>
+          <label
+            jengaLabel
+            for="passwordID"
+            class="flex items-center justify-between"
+          >
+            Email
+          </label>
+          <input jengaInput type="email" name="email" id="emailId" />
+        </jenga-textfield>
       </div>
-      <div>Code here</div>
+      <div>
+        <app-code-view [code]="rawCodes.default"></app-code-view>
+      </div>
+    </div>
+
+    <div class="grid grid-cols-2 gap-x-12 mt-8">
+      <div>
+        <jenga-textfield error="email is invalid">
+          <label
+            jengaLabel
+            for="emailId"
+            class="flex items-center justify-between"
+          >
+            Email (with error)
+          </label>
+          <input jengaInput type="email" name="email" id="emailId" />
+        </jenga-textfield>
+      </div>
+      <div>
+        <app-code-view [code]="rawCodes.error"></app-code-view>
+      </div>
     </div>
   </div>
 </app-layout>

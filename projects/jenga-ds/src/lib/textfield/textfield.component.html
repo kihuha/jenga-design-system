@@ -22,6 +22,10 @@
   </div>
 </div>
 
-<div #hint>
+<div #hint *ngIf="!error">
   <ng-content select="[jengaHint]"></ng-content>
+</div>
+
+<div #errorHint *ngIf="error">
+  <small class="text-red-500 font-bold">{{ error }}</small>
 </div>

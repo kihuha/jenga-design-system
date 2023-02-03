@@ -1,10 +1,4 @@
-import { Component, ViewChild } from '@angular/core';
-import {
-  FormBuilder,
-  FormControl,
-  FormGroup,
-  Validators,
-} from '@angular/forms';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-textfield-info',
@@ -12,16 +6,34 @@ import {
   styleUrls: ['./textfield-info.component.scss'],
 })
 export class TextfieldInfoComponent {
-  testForm = new FormGroup({
-    password: new FormControl('', [
-      Validators.required,
-      Validators.maxLength(4),
-    ]),
-  });
-
-  constructor() {}
-
-  handleTestSubmit(ev: any) {
-    ev.preventDefault();
-  }
+  rawCodes = {
+    default: `
+  <jenga-textfield>
+    <label
+      jengaLabel
+      for="passwordID"
+      class="flex items-center justify-between"
+    >
+      Email
+    </label>
+    <input
+      jengaInput
+      type="email"
+      name="email"
+      id="emailId"
+      formControlName="email"
+    />
+  </jenga-textfield>`,
+    error: `
+  <jenga-textfield error="email is invalid">
+      <label
+        jengaLabel
+        for="emailId"
+        class="flex items-center justify-between"
+      >
+        Email (with error)
+      </label>
+      <input jengaInput type="email" name="email" id="emailId" />
+  </jenga-textfield>`,
+  };
 }
