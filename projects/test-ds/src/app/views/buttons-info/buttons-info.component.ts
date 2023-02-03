@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { TColors } from 'projects/test-ds/types';
+import { TButtonSizes, TColors } from 'projects/test-ds/types';
 
 @Component({
   selector: 'app-buttons-info',
@@ -24,12 +24,30 @@ export class ButtonsInfoComponent {
       type: 'outlined',
     },
   ];
-
-  buttonColors: { name: TColors; code: string }[] = [
-    { name: 'primary', code: '#BF002D' },
-    { name: 'secondary', code: '#B5007D' },
-    { name: 'success', code: '#006C49' },
-    { name: 'warning', code: '#FFDF9A' },
-  ];
+  buttonColors: TColors[] = ['primary', 'secondary', 'success', 'warning'];
+  buttonSizes: TButtonSizes[] = ['sm', 'md', 'lg'];
   activeColor = 0;
+
+  rawCode: string[] = [
+    `
+  ...
+    <div class="mt-5">
+    <jenga-button color="primary" type="filled">
+      <span>Talk to Sales</span>
+      <span class="material-symbols-outlined">arrow_right_alt</span>
+    </jenga-button>
+  </div>
+  ...
+    `,
+    `
+    ...
+      <div class="flex items-center justify-end gap-5 mt-5">
+        <jenga-button color="primary" type="text"> Cancel </jenga-button>
+        <jenga-button color="primary" type="filled">
+          Yes, Delete User
+        </jenga-button>
+      </div>
+    ...
+    `,
+  ];
 }

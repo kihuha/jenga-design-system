@@ -15,11 +15,5 @@
     'btn--success': this.color === 'success'
   }"
 >
-  <span
-    *ngIf="icon"
-    class="material-symbols-rounded btn__icon"
-    data-testid="btn-icon"
-    >{{ icon }}</span
-  >
-  <span data-testid="btn-label">{{ label }}</span>
+  <ng-content></ng-content>
 </button>

@@ -1,290 +1,101 @@
-/**
-* The main color reads from the hue, saturation and lightness
-* css custom properties to enable easy adjustment of the lightness
-* as needed
-*/
-$btn-primary-color: hsl(
-  var(--primary-color-hue, 346),
-  var(--primary-color-saturation, 100%),
-  var(--primary-color-lightness, 37%)
-);
-
-$btn-secondary-color: hsl(
-  var(--secondary-color-hue, 319),
-  var(--secondary-color-saturation, 100%),
-  var(--secondary-color-lightness, 35%)
-);
-
-$btn-success-color: hsl(
-  var(--success-color-hue, 161),
-  var(--success-color-saturation, 100%),
-  var(--success-color-lightness, 21%)
-);
-
-$warning-color: hsl(
-  var(--warning-color-hue, 41),
-  var(--warning-color-saturation, 100%),
-  var(--warning-color-lightness, 80%)
-);
-
-$btn-color: black;
-
-button,
 .btn {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: inherit;
-  font-size: 100%;
-  font-weight: inherit;
-  text-transform: none;
-  line-height: inherit;
-  color: inherit;
-  border-width: 0;
-  border-style: solid;
-  cursor: pointer;
-}
-
-button,
-.btn,
-[type="button"],
-[type="reset"],
-[type="submit"] {
-  appearance: button;
-  background-color: transparent;
-  background-image: none;
-}
-
-.btn {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: 600;
-  border: solid 1px transparent;
-
-  transition: box-shadow 0.2s ease;
-
-  &:hover,
-  &:focus {
-    box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.05),
-      0px 4px 5px 0px rgba(0, 0, 0, 0.1), 0px 1px 10px 0px rgba(0, 0, 0, 0.08);
-  }
+  @apply flex items-center gap-2 transition-shadow ease-in-out;
 
   &--sm {
-    height: 2rem;
-    padding: 0 1rem;
-    font-size: 0.75em;
-    border-radius: 8px;
-    letter-spacing: 0.02em;
-
-    .btn__icon {
-      transform: translateX(-4px);
-      font-size: 1.5em;
-    }
+    @apply h-8 px-4 text-xs rounded-lg tracking-wide font-semibold;
   }
 
   &--md {
-    height: 2.5rem;
-    padding: 0 1.5rem;
-    font-size: 0.875em;
-    border-radius: 10px;
-
-    .btn__icon {
-      transform: translateX(-8px);
-      font-size: 1.5em;
-    }
+    @apply h-10 px-6 text-sm rounded-lg tracking-wide font-semibold;
   }
 
   &--lg {
-    height: 3.25rem;
-    padding: 0 2.5rem;
-    font-size: 1.2em;
-    border-radius: 12px;
-
-    .btn__icon {
-      transform: translateX(-12px);
-      font-size: 1.5em;
-    }
+    @apply h-12 px-8 text-base rounded-lg font-semibold;
   }
 
-  &__icon {
-    transform: translateX(-8px);
+  // ELEVATED
+  &--elevated.btn--primary {
+    @apply text-primary-500 bg-white shadow-md focus:shadow-lg hover:shadow-lg;
   }
 
-  &--elevated {
-    color: $btn-primary-color;
-    background: var(--btn-color, white);
-    box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2),
-      0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12);
-
-    &.btn--primary {
-      color: $btn-primary-color;
-    }
-
-    &.btn--secondary {
-      color: $btn-secondary-color;
-    }
-
-    &.btn--success {
-      color: $btn-success-color;
-    }
-
-    &.btn--warning {
-      color: hsl(
-        var(--warning-color-hue, 41),
-        var(--warning-color-saturation, 100%),
-        35%
-      );
-    }
+  &--elevated.btn--secondary {
+    @apply text-secondary-500 bg-white shadow-md focus:shadow-lg hover:shadow-lg;
   }
 
-  &--filled {
-    background: $btn-primary-color;
-    color: white;
+  &--elevated.btn--success {
+    @apply text-success-500 bg-white shadow-md focus:shadow-lg hover:shadow-lg;
+  }
+  &--elevated.btn--warning {
+    @apply text-warning-500 bg-white shadow-md focus:shadow-lg hover:shadow-lg;
+  }
+  // END OF ELEVATED
 
-    &.btn--primary {
-      background: $btn-primary-color;
-    }
-
-    &.btn--secondary {
-      background: $btn-secondary-color;
-    }
-
-    &.btn--success {
-      background: $btn-success-color;
-    }
-
-    &.btn--warning {
-      background: $warning-color;
-      color: hsl(
-        var(--warning-color-hue, 41),
-        var(--warning-color-saturation, 100%),
-        20%
-      );
-    }
+  // FILLED
+  &--filled.btn--primary {
+    @apply bg-primary-500 text-white shadow-md focus:shadow-lg hover:shadow-lg;
   }
 
-  &--tonal {
-    background: hsl(
-      var(--primary-color-hue, 346),
-      var(--primary-color-saturation, 100%),
-      96%
-    );
-    color: hsl(
-      var(--primary-color-hue, 346),
-      var(--primary-color-saturation, 100%),
-      35%
-    );
-
-    &.btn--primary {
-      background: hsl(
-        var(--primary-color-hue, 346),
-        var(--primary-color-saturation, 100%),
-        96%
-      );
-      color: hsl(
-        var(--primary-color-hue, 346),
-        var(--primary-color-saturation, 100%),
-        35%
-      );
-    }
-
-    &.btn--secondary {
-      background: hsl(
-        var(--secondary-color-hue, 319),
-        var(--secondary-color-saturation, 100%),
-        96%
-      );
-      color: hsl(
-        var(--secondary-color-hue, 319),
-        var(--secondary-color-saturation, 100%),
-        35%
-      );
-    }
-
-    &.btn--success {
-      background: hsl(
-        var(--success-color-hue, 161),
-        var(--success-color-saturation, 100%),
-        94%
-      );
-      color: hsl(
-        var(--success-color-hue, 161),
-        var(--success-color-saturation, 100%),
-        35%
-      );
-    }
-
-    &.btn--warning {
-      background: hsl(
-        var(--warning-color-hue, 41),
-        var(--warning-color-saturation, 100%),
-        94%
-      );
-      color: hsl(
-        var(--warning-color-hue, 41),
-        var(--warning-color-saturation, 100%),
-        35%
-      );
-    }
+  &--filled.btn--secondary {
+    @apply bg-secondary-500 text-white shadow-md focus:shadow-lg hover:shadow-lg;
   }
 
-  &--outlined {
-    color: $btn-primary-color;
-    border-color: $btn-primary-color;
+  &--filled.btn--success {
+    @apply bg-success-500 text-white shadow-md focus:shadow-lg hover:shadow-lg;
+  }
+  &--filled.btn--warning {
+    @apply bg-warning-500 text-white shadow-md focus:shadow-lg hover:shadow-lg;
+  }
+  // END OF FILLED
 
-    &.btn--primary {
-      color: $btn-primary-color;
-      border-color: $btn-primary-color;
-    }
-
-    &.btn--secondary {
-      color: $btn-secondary-color;
-      border-color: $btn-secondary-color;
-    }
-
-    &.btn--success {
-      color: $btn-success-color;
-      border-color: $btn-success-color;
-    }
-
-    &.btn--warning {
-      color: hsl(
-        var(--warning-color-hue, 41),
-        var(--warning-color-saturation, 100%),
-        35%
-      );
-      border-color: hsl(
-        var(--warning-color-hue, 41),
-        var(--warning-color-saturation, 100%),
-        35%
-      );
-    }
+  // OUTLINED
+  &--outlined.btn--primary {
+    @apply border border-primary-500 text-primary-500 shadow-md focus:shadow-lg hover:shadow-lg;
   }
 
-  &--text {
-    color: $btn-primary-color;
-    background: transparent;
-    border-color: transparent;
-
-    &.btn--primary {
-      color: $btn-primary-color;
-    }
-
-    &.btn--secondary {
-      color: $btn-secondary-color;
-    }
-
-    &.btn--success {
-      color: $btn-success-color;
-    }
-
-    &.btn--warning {
-      color: hsl(
-        var(--warning-color-hue, 41),
-        var(--warning-color-saturation, 100%),
-        35%
-      );
-    }
+  &--outlined.btn--secondary {
+    @apply border border-secondary-500 text-secondary-500 shadow-md focus:shadow-lg hover:shadow-lg;
   }
+
+  &--outlined.btn--success {
+    @apply border border-success-500 text-success-500 shadow-md focus:shadow-lg hover:shadow-lg;
+  }
+  &--outlined.btn--warning {
+    @apply border border-warning-500 text-warning-500 shadow-md focus:shadow-lg hover:shadow-lg;
+  }
+  // END OF OUTLINED
+
+  // TEXT
+  &--text.btn--primary {
+    @apply text-primary-500  focus:shadow-lg hover:shadow-lg;
+  }
+
+  &--text.btn--secondary {
+    @apply text-secondary-500  focus:shadow-lg hover:shadow-lg;
+  }
+
+  &--text.btn--success {
+    @apply text-success-500  focus:shadow-lg hover:shadow-lg;
+  }
+  &--text.btn--warning {
+    @apply text-warning-500  focus:shadow-lg hover:shadow-lg;
+  }
+  // END OF TEXT
+
+  // TONAL
+  &--tonal.btn--primary {
+    @apply bg-primary-50 text-primary-700 shadow-sm focus:shadow hover:shadow;
+  }
+
+  &--tonal.btn--secondary {
+    @apply bg-secondary-50 text-secondary-700 shadow-sm focus:shadow hover:shadow;
+  }
+
+  &--tonal.btn--success {
+    @apply bg-success-50 text-success-700 shadow-sm focus:shadow hover:shadow;
+  }
+
+  &--tonal.btn--warning {
+    @apply bg-warning-100/30 text-warning-700 shadow-sm focus:shadow hover:shadow;
+  }
+  // END OF TONAL
 }

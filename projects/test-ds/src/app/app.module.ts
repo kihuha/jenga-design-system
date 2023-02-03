@@ -15,7 +15,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { LayoutComponent } from './shared/layout/layout.component';
 import { SidebarComponent } from './shared/sidebar/sidebar.component';
 import { InstallationComponent } from './views/installation/installation.component';
-import { ColorSelectorComponent } from './color-selector/color-selector.component';
 import { DialogComponent } from './views/alerts-info/widgets/dialog/dialog.component';
 
 import { ClipboardModule } from '@angular/cdk/clipboard';
@@ -31,7 +30,6 @@ import { TextfieldInfoComponent } from './views/textfield-info/textfield-info.co
     LayoutComponent,
     SidebarComponent,
     InstallationComponent,
-    ColorSelectorComponent,
     DialogComponent,
     CodeViewComponent,
     TextfieldInfoComponent,

@@ -8,14 +8,6 @@ import { TColors } from 'projects/test-ds/types';
 })
 export class Button {
   /**
-   * Button contents
-   *
-   * @required
-   */
-  @Input()
-  label = '';
-
-  /**
    * Button type
    *
    * can either be elevated, filled, tonal, outlined, text
