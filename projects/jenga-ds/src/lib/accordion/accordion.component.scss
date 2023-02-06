@@ -1,6 +1,12 @@
 .accordion-item-content {
-  @apply text-sm leading-7 text-slate-500 max-h-0 opacity-0
-      peer-data-[accordion~='open']:max-h-10
+  @apply text-sm leading-7 text-slate-500 max-h-0 opacity-0 invisible
       peer-data-[accordion~='open']:opacity-100
+      peer-data-[accordion~='open']:visible
       transition-all;
+}
+
+.peer[data-accordion~="open"] ~ .accordion-item-content {
+  max-height: calc(25rem + 4rem);
+  padding: 1rem 0;
+  transition: max-height 1s ease, all 0.5s ease;
 }
