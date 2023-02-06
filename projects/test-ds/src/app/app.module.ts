@@ -21,6 +21,7 @@ import { ClipboardModule } from '@angular/cdk/clipboard';
 import { CodeViewComponent } from './shared/code-view/code-view.component';
 import { TextfieldInfoComponent } from './views/textfield-info/textfield-info.component';
 import { AccordionInfoComponent } from './views/accordion-info/accordion-info.component';
+import { SidebarInfoComponent } from './views/sidebar-info/sidebar-info.component';
 
 @NgModule({
   declarations: [
@@ -35,6 +36,7 @@ import { AccordionInfoComponent } from './views/accordion-info/accordion-info.co
     CodeViewComponent,
     TextfieldInfoComponent,
     AccordionInfoComponent,
+    SidebarInfoComponent,
   ],
   imports: [
     BrowserModule,

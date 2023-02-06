@@ -6,7 +6,7 @@ import { timer } from 'rxjs';
   templateUrl: './accordion.component.html',
   styleUrls: ['./accordion.component.scss'],
 })
-export class AccordionComponent {
+export class Accordion {
   openItems: { [key: number]: 'open' | 'close' } = {};
   defaultOpen = 0;
   children = [0, 1, 2];

@@ -12,7 +12,9 @@ import {
   FormsModule,
   ReactiveFormsModule,
 } from '@angular/forms';
-import { AccordionComponent } from './accordion/accordion.component';
+import { Accordion } from './accordion/accordion.component';
+import { Sidebar } from './sidebar/sidebar.component';
+import { SidebarGroupDirective } from './sidebar/sidebar-group.directive';
 
 @NgModule({
   declarations: [
@@ -22,17 +24,21 @@ import { AccordionComponent } from './accordion/accordion.component';
     InputDirective,
     LabelDirective,
     HintDirective,
-    AccordionComponent,
+    Accordion,
+    Sidebar,
+    SidebarGroupDirective,
   ],
   imports: [BrowserModule, FormsModule, ReactiveFormsModule],
   exports: [
-    AccordionComponent,
+    Accordion,
     Alert,
     Button,
     Textfield,
     InputDirective,
     LabelDirective,
     HintDirective,
+    Sidebar,
+    SidebarGroupDirective,
   ],
   providers: [FormGroupDirective, FormControlDirective],
 })
