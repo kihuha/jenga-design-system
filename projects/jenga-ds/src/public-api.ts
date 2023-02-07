@@ -13,4 +13,3 @@ export * from './lib/sidebar/sidebar.component';
 export * from './lib/input/input.directive';
 export * from './lib/label/label.directive';
 export * from './lib/hint/hint.directive';
-export * from './lib/sidebar/sidebar-group.directive';

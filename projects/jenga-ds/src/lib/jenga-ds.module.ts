@@ -14,7 +14,6 @@ import {
 } from '@angular/forms';
 import { Accordion } from './accordion/accordion.component';
 import { Sidebar } from './sidebar/sidebar.component';
-import { SidebarGroupDirective } from './sidebar/sidebar-group.directive';
 
 @NgModule({
   declarations: [
@@ -26,7 +25,6 @@ import { SidebarGroupDirective } from './sidebar/sidebar-group.directive';
     HintDirective,
     Accordion,
     Sidebar,
-    SidebarGroupDirective,
   ],
   imports: [BrowserModule, FormsModule, ReactiveFormsModule],
   exports: [
@@ -38,7 +36,6 @@ import { SidebarGroupDirective } from './sidebar/sidebar-group.directive';
     LabelDirective,
     HintDirective,
     Sidebar,
-    SidebarGroupDirective,
   ],
   providers: [FormGroupDirective, FormControlDirective],
 })
