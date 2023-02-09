@@ -1,0 +1,32 @@
+<app-layout title="Data Table">
+  <h3 class="text-xl mb-6">01. Visuals</h3>
+  <cdk-table [dataSource]="dataSource">
+    <div selectedPortal>content here</div>
+    <!-- Position Column -->
+    <ng-container cdkColumnDef="position">
+      <th jenga-header-cell>No.</th>
+      <td jenga-cell *cdkCellDef="let element">{{ element.position }}</td>
+    </ng-container>
+
+    <!-- Name Column -->
+    <ng-container cdkColumnDef="name">
+      <th cdk-header-cell *cdkHeaderCellDef>Name</th>
+      <td jenga-cell *cdkCellDef="let element">{{ element.name }}</td>
+    </ng-container>
+
+    <!-- Weight Column -->
+    <ng-container cdkColumnDef="weight">
+      <th cdk-header-cell *cdkHeaderCellDef>Weight</th>
+      <td jenga-cell *cdkCellDef="let element">{{ element.weight }}</td>
+    </ng-container>
+
+    <!-- Symbol Column -->
+    <ng-container cdkColumnDef="symbol">
+      <th cdk-header-cell *cdkHeaderCellDef>Symbol</th>
+      <td jenga-cell *cdkCellDef="let element">{{ element.symbol }}</td>
+    </ng-container>
+
+    <tr cdk-header-row *cdkHeaderRowDef="displayedColumns"></tr>
+    <tr cdk-row *cdkRowDef="let row; columns: displayedColumns"></tr>
+  </cdk-table>
+</app-layout>

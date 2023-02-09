@@ -18,10 +18,12 @@ import { InstallationComponent } from './views/installation/installation.compone
 import { DialogComponent } from './views/alerts-info/widgets/dialog/dialog.component';
 
 import { ClipboardModule } from '@angular/cdk/clipboard';
+import { CdkTableModule } from '@angular/cdk/table';
 import { CodeViewComponent } from './shared/code-view/code-view.component';
 import { TextfieldInfoComponent } from './views/textfield-info/textfield-info.component';
 import { AccordionInfoComponent } from './views/accordion-info/accordion-info.component';
 import { SidebarInfoComponent } from './views/sidebar-info/sidebar-info.component';
+import { DataTableInfoComponent } from './views/data-table-info/data-table-info.component';
 
 @NgModule({
   declarations: [
@@ -37,6 +39,7 @@ import { SidebarInfoComponent } from './views/sidebar-info/sidebar-info.componen
     TextfieldInfoComponent,
     AccordionInfoComponent,
     SidebarInfoComponent,
+    DataTableInfoComponent,
   ],
   imports: [
     BrowserModule,
@@ -45,6 +48,7 @@ import { SidebarInfoComponent } from './views/sidebar-info/sidebar-info.componen
     AppRoutingModule,
     JengaDsModule,
     ClipboardModule,
+    CdkTableModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

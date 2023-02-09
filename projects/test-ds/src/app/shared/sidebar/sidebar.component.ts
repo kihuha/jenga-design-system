@@ -1,7 +1,5 @@
 import { Component } from '@angular/core';
-import { Event, NavigationStart, Router } from '@angular/router';
-import { map, Observable, switchMap } from 'rxjs';
-
+import { NavigationStart, Router } from '@angular/router';
 @Component({
   selector: 'app-sidebar',
   templateUrl: './sidebar.component.html',
@@ -37,6 +35,10 @@ export class SidebarComponent {
     {
       name: 'Sidebar',
       link: '/sidebar',
+    },
+    {
+      name: 'Data Table',
+      link: '/datatable',
     },
   ];
 

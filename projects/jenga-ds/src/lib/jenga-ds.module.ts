@@ -14,7 +14,9 @@ import {
 } from '@angular/forms';
 import { Accordion } from './accordion/accordion.component';
 import { Sidebar } from './sidebar/sidebar.component';
-
+import { CdkTableModule } from '@angular/cdk/table';
+import { PortalModule } from '@angular/cdk/portal';
+import { CellDirective } from './datatable/cell.directive';
 @NgModule({
   declarations: [
     Alert,
@@ -25,8 +27,9 @@ import { Sidebar } from './sidebar/sidebar.component';
     HintDirective,
     Accordion,
     Sidebar,
+    CellDirective,
   ],
-  imports: [BrowserModule, FormsModule, ReactiveFormsModule],
+  imports: [BrowserModule, FormsModule, ReactiveFormsModule, CdkTableModule],
   exports: [
     Accordion,
     Alert,
@@ -36,6 +39,7 @@ import { Sidebar } from './sidebar/sidebar.component';
     LabelDirective,
     HintDirective,
     Sidebar,
+    CellDirective,
   ],
   providers: [FormGroupDirective, FormControlDirective],
 })
