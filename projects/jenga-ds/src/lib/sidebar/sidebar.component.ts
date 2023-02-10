@@ -17,7 +17,7 @@ interface IRouteParent {
 @Component({
   selector: 'jenga-sidebar',
   templateUrl: './sidebar.component.html',
-  styleUrls: ['./sidebar.component.scss'],
+  styleUrls: ['./sidebar.component.css'],
 })
 export class Sidebar {
   @Input()

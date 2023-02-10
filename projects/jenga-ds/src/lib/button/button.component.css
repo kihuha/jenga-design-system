@@ -1,0 +1,91 @@
+.btn {
+  @apply flex items-center justify-center w-full gap-2 transition-shadow ease-in-out;
+}
+
+.btn--sm {
+  @apply h-8 px-4 text-xs rounded-lg tracking-wide font-semibold;
+}
+
+.btn--md {
+  @apply h-10 px-6 text-sm rounded-lg tracking-wide font-semibold;
+}
+
+.btn--lg {
+  @apply h-12 px-8 text-base rounded-lg font-semibold;
+}
+
+.btn--elevated.btn--primary {
+  @apply text-primary-500 bg-white shadow-md focus:shadow-lg hover:shadow-lg;
+}
+
+.btn--elevated.btn--secondary {
+  @apply text-secondary-500 bg-white shadow-md focus:shadow-lg hover:shadow-lg;
+}
+
+.btn--elevated.btn--success {
+  @apply text-success-500 bg-white shadow-md focus:shadow-lg hover:shadow-lg;
+}
+.btn--elevated.btn--warning {
+  @apply text-warning-500 bg-white shadow-md focus:shadow-lg hover:shadow-lg;
+}
+
+.btn--filled.btn--primary {
+  @apply bg-primary-500 text-white shadow-md focus:shadow-lg hover:shadow-lg;
+}
+
+.btn--filled.btn--secondary {
+  @apply bg-secondary-500 text-white shadow-md focus:shadow-lg hover:shadow-lg;
+}
+
+.btn--filled.btn--success {
+  @apply bg-success-500 text-white shadow-md focus:shadow-lg hover:shadow-lg;
+}
+.btn--filled.btn--warning {
+  @apply bg-warning-500 text-white shadow-md focus:shadow-lg hover:shadow-lg;
+}
+
+.btn--outlined.btn--primary {
+  @apply border border-primary-500 text-primary-500 shadow-md focus:shadow-lg hover:shadow-lg;
+}
+
+.btn--outlined.btn--secondary {
+  @apply border border-secondary-500 text-secondary-500 shadow-md focus:shadow-lg hover:shadow-lg;
+}
+
+.btn--outlined.btn--success {
+  @apply border border-success-500 text-success-500 shadow-md focus:shadow-lg hover:shadow-lg;
+}
+.btn--outlined.btn--warning {
+  @apply border border-warning-500 text-warning-500 shadow-md focus:shadow-lg hover:shadow-lg;
+}
+
+.btn--text.btn--primary {
+  @apply text-primary-500  focus:shadow-lg hover:shadow-lg;
+}
+
+.btn--text.btn--secondary {
+  @apply text-secondary-500  focus:shadow-lg hover:shadow-lg;
+}
+
+.btn--text.btn--success {
+  @apply text-success-500  focus:shadow-lg hover:shadow-lg;
+}
+.btn--text.btn--warning {
+  @apply text-warning-500  focus:shadow-lg hover:shadow-lg;
+}
+
+.btn--tonal.btn--primary {
+  @apply bg-primary-50 text-primary-700 shadow-sm focus:shadow hover:shadow;
+}
+
+.btn--tonal.btn--secondary {
+  @apply bg-secondary-50 text-secondary-700 shadow-sm focus:shadow hover:shadow;
+}
+
+.btn--tonal.btn--success {
+  @apply bg-success-50 text-success-700 shadow-sm focus:shadow hover:shadow;
+}
+
+.btn--tonal.btn--warning {
+  @apply bg-warning-100/30 text-warning-700 shadow-sm focus:shadow hover:shadow;
+}

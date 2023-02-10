@@ -3,7 +3,7 @@ import { Component, ElementRef, Input, ViewChild } from '@angular/core';
 @Component({
   selector: 'jenga-textfield',
   templateUrl: './textfield.component.html',
-  styleUrls: ['./textfield.component.scss'],
+  styleUrls: ['./textfield.component.css'],
 })
 export class Textfield {
   @ViewChild('startIcon') startIcon!: ElementRef<HTMLDivElement>;

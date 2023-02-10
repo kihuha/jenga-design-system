@@ -4,7 +4,7 @@ import { timer } from 'rxjs';
 @Component({
   selector: 'jenga-accordion',
   templateUrl: './accordion.component.html',
-  styleUrls: ['./accordion.component.scss'],
+  styleUrls: ['./accordion.component.css'],
 })
 export class Accordion {
   openItems: { [key: number]: 'open' | 'close' } = {};

@@ -1,6 +1,6 @@
 {
-  "name": "jenga-ds",
-  "version": "0.0.1",
+  "name": "ng-jenga-ds",
+  "version": "0.0.4",
   "peerDependencies": {
     "@angular/common": "^15.0.0",
     "@angular/core": "^15.0.0",
@@ -12,7 +12,7 @@
   },
   "exports": {
     ".": {
-      "scss": "./styles/global.scss"
+      "css": "./styles/global.css"
     }
   }
 }

@@ -3,7 +3,7 @@ import { Directive } from '@angular/core';
 @Directive({
   selector: '[jengaHint]',
   host: {
-    class: 'text-xs text-slate-400',
+    class: 'jenga-hint',
   },
 })
 export class HintDirective {

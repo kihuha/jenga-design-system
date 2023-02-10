@@ -3,7 +3,7 @@ import { Directive } from '@angular/core';
 @Directive({
   selector: '[jengaLabel]',
   host: {
-    class: 'text-sm font-semibold',
+    class: 'jenga-label',
   },
 })
 export class LabelDirective {

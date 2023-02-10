@@ -6,7 +6,6 @@ export type TButtonSizes = 'sm' | 'md' | 'lg';
 @Component({
   selector: 'jenga-button',
   templateUrl: './button.component.html',
-  styleUrls: ['./button.component.scss'],
 })
 export class Button {
   /**

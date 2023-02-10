@@ -4,7 +4,8 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
+    "build:jenga-ds": "ng build --project jenga-ds && yarn build:tailwind",
+    "build:tailwind": "tailwindcss -i ./projects/jenga-ds/src/styles/global.css -o dist/jenga-ds/styles/global.css -m",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
@@ -26,6 +27,7 @@
     "codemirror": "^6.0.1",
     "ng-jenga-ds": "^0.0.3",
     "rxjs": "~7.5.0",
+    "tailwindcss": "^3.2.6",
     "tslib": "^2.3.0",
     "zone.js": "~0.12.0"
   },

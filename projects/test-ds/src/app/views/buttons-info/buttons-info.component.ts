@@ -23,8 +23,8 @@ export class ButtonsInfoComponent {
       type: 'outlined',
     },
   ];
-  buttonColors = ['primary', 'secondary', 'success', 'warning'];
-  buttonSizes = ['sm', 'md', 'lg'];
+  buttonColors: any = ['primary', 'secondary', 'success', 'warning'];
+  buttonSizes: any = ['sm', 'md', 'lg'];
   activeColor = 0;
 
   rawCode: string[] = [

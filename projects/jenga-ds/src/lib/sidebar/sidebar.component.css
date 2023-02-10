@@ -1,0 +1,47 @@
+.sidebar {
+  @apply flex flex-col w-80 min-h-screen py-6 bg-white;
+}
+
+.sidebar__logo {
+  @apply w-32 mb-16 px-4;
+}
+
+.sidebar__header {
+  @apply flex items-center justify-between w-full px-4 py-4 text-sm
+  font-semibold cursor-pointer border-b border-primary-50 hover:bg-slate-100;
+}
+
+.sidebar__header.active {
+  @apply bg-primary-500 text-white;
+}
+
+.sidebar__header.active > .material-symbols-outlined {
+  font-variation-settings: "FILL" 1;
+}
+
+.sidebar__header.peer[data-sidebarAccordion~="open"] ~ .sidebar__content {
+  visibility: visible;
+  max-height: 100rem;
+  opacity: 1;
+  transition: all 0.3s ease-in-out;
+}
+
+.sidebar__content {
+  @apply flex flex-col w-full items-start max-h-0 opacity-0 transition-all invisible;
+}
+
+.sidebar__content-item {
+  @apply flex items-start w-full py-3 pl-12 text-sm border-slate-100 hover:bg-slate-100;
+}
+
+.sidebar__content-item:first-child {
+  @apply mt-2;
+}
+
+.sidebar__content-item:last-child {
+  @apply mb-2;
+}
+
+.sidebar__content-item.active {
+  @apply text-primary-500;
+}

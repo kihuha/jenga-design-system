@@ -3,7 +3,7 @@ import { Component, Input } from '@angular/core';
 @Component({
   selector: 'jenga-alert',
   templateUrl: './alert.component.html',
-  styleUrls: ['./alert.component.scss'],
+  styleUrls: ['./alert.component.css'],
 })
 export class Alert {
   @Input()

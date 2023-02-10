@@ -1,0 +1,35 @@
+.alert {
+  @apply flex items-center gap-2 w-full h-full p-4 rounded-lg font-semibold text-sm leading-5;
+}
+
+.alert--filled.alert--primary {
+  @apply bg-primary-500 text-white;
+}
+
+.alert--filled.alert--secondary {
+  @apply bg-secondary-500 text-white;
+}
+
+.alert--filled.alert--success {
+  @apply bg-success-500 text-white;
+}
+
+.alert--filled.alert--warning {
+  @apply bg-warning-100 text-black;
+}
+
+.alert--tonal.alert--primary {
+  @apply bg-primary-50 text-primary-700 border border-primary-100;
+}
+
+.alert--tonal.alert--secondary {
+  @apply bg-secondary-50 text-secondary-700 border border-secondary-100;
+}
+
+.alert--tonal.alert--success {
+  @apply bg-success-50 text-success-700 border border-success-100;
+}
+
+.alert--tonal.alert--warning {
+  @apply bg-warning-50 text-warning-700 border border-warning-100;
+}
