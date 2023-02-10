@@ -1,11 +1,8 @@
 import { forwardRef, NgModule } from '@angular/core';
-import {
-  FormsModule,
-  NG_VALUE_ACCESSOR,
-  ReactiveFormsModule,
-} from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
-import { JengaDsModule, Textfield } from 'projects/jenga-ds/src/public-api';
+// import { JengaDsModule } from 'projects/jenga-ds/src/public-api';
+import { JengaDsModule } from 'jenga-ds';
 
 import { AppComponent } from './app.component';
 import { ButtonsInfoComponent } from './views/buttons-info/buttons-info.component';

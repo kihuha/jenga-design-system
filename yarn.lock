@@ -4599,6 +4599,13 @@ neo-async@^2.6.2:
   resolved "https://registry.yarnpkg.com/neo-async/-/neo-async-2.6.2.tgz#b4aafb93e3aeb2d8174ca53cf163ab7d7308305f"
   integrity sha512-Yd3UES5mWCSqR+qNT93S3UoYUkqAZ9lLg8a7g9rimsWmYGK8cVToA4/sF3RrshdyV3sAGMXVUmpMYOw+dLpOuw==
 
+ng-jenga-ds@^0.0.3:
+  version "0.0.3"
+  resolved "https://registry.yarnpkg.com/ng-jenga-ds/-/ng-jenga-ds-0.0.3.tgz#60553d08820f1c9dede7244978291e2b8dc3dc0b"
+  integrity sha512-1hRTDC1IFawd1B5J5QK8qVT850yQZyfNaHobeiIlzY8SBKRX9rOHhlEoNbGlAI49jssPxBoo82gNzeK8YFAA8g==
+  dependencies:
+    tslib "^2.3.0"
+
 ng-packagr@^15.0.0:
   version "15.1.1"
   resolved "https://registry.yarnpkg.com/ng-packagr/-/ng-packagr-15.1.1.tgz#c59de99748342f14cb2119a605e8ebd89250a9d2"

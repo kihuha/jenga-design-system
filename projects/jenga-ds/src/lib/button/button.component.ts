@@ -1,5 +1,7 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
-import { TColors } from 'projects/test-ds/types';
+
+export type TColors = 'primary' | 'secondary' | 'warning' | 'success';
+export type TButtonSizes = 'sm' | 'md' | 'lg';
 
 @Component({
   selector: 'jenga-button',

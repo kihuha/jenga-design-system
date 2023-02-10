@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { TButtonSizes, TColors } from 'projects/test-ds/types';
 
 @Component({
   selector: 'app-buttons-info',
@@ -24,8 +23,8 @@ export class ButtonsInfoComponent {
       type: 'outlined',
     },
   ];
-  buttonColors: TColors[] = ['primary', 'secondary', 'success', 'warning'];
-  buttonSizes: TButtonSizes[] = ['sm', 'md', 'lg'];
+  buttonColors = ['primary', 'secondary', 'success', 'warning'];
+  buttonSizes = ['sm', 'md', 'lg'];
   activeColor = 0;
 
   rawCode: string[] = [

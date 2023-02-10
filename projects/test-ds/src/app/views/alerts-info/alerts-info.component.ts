@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { TColors } from 'projects/test-ds/types';
 import { rawWiddgetCode } from './widgets/widgetCodes';
 
 @Component({
